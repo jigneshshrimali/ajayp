@@ -1,0 +1,1143 @@
+/* ==========================================================================
+   THE GREAT PUNJABI DHABA - VISUAL ENGINE STYLE SHEETS
+   ========================================================================== */
+
+/* 1. ARCHITECTURAL DESIGN ROOT & TOKENS */
+:root {
+    --clr-mustard: #FFB300;
+    --clr-tandoor-orange: #FF5722;
+    --clr-deep-red: #D32F2F;
+    --clr-rustic-brown: #3E2723;
+    --clr-cream-white: #FFFDE7;
+    --clr-punjab-green: #2E7D32;
+    --clr-dark-bg: #120B0A;
+    --clr-card-bg: rgba(62, 39, 35, 0.45);
+    
+    --font-display: 'Impact', 'Arial Black', sans-serif;
+    --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    --truck-art-border: 6px dashed var(--clr-mustard);
+}
+
+/* Reset and Core Global Layout Properties */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: auto;
+    background-color: var(--clr-dark-bg);
+    color: var(--clr-cream-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scannability Custom Scrollbar Integration */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--clr-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--clr-tandoor-orange);
+    border-radius: 5px;
+}
+
+/* 2. THE THREE.JS LAYER CANVAS */
+#fire-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#scroll-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* 3. CINEMATIC CURSOR INTERACTION */
+.custom-cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--clr-mustard);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+.cursor-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: var(--clr-tandoor-orange);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.custom-cursor.hovering {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 87, 34, 0.15);
+    border-color: var(--clr-tandoor-orange);
+}
+
+/* 4. PRELOADER APPARATUS */
+#dhaba-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-dark-bg);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preloader-content {
+    text-align: center;
+}
+.ek-onkar {
+    font-size: clamp(4rem, 10vw, 8rem);
+    color: var(--clr-mustard);
+    display: block;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--clr-tandoor-orange);
+}
+.truck-text-glow {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 2px;
+    color: var(--clr-cream-white);
+    text-transform: uppercase;
+}
+.preloader-sub {
+    color: var(--clr-tandoor-orange);
+    margin-top: 0.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.progress-bar-container {
+    width: 250px;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    margin: 2rem auto 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--clr-mustard);
+}
+
+/* 5. TYPOGRAPHY & DESIGN COMPACTS */
+.sec-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-transform: uppercase;
+    color: var(--clr-cream-white);
+    letter-spacing: 1px;
+    line-height: 0.95;
+    margin-top: 0.5rem;
+}
+.highlight-fire {
+    color: var(--clr-mustard);
+    text-shadow: 2px 2px 0px var(--clr-deep-red);
+}
+.truck-art-tag {
+    background: var(--clr-deep-red);
+    color: var(--clr-mustard);
+    padding: 6px 14px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--clr-mustard);
+    display: inline-block;
+}
+.section-header {
+    margin-bottom: 4rem;
+    max-width: 800px;
+}
+.section-header.center-align {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sec-subtitle {
+    color: #BCAAA4;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* Veg Indicator Dot Layout Component */
+.veg-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--clr-punjab-green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin-right: 6px;
+}
+.veg-dot::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--clr-punjab-green);
+    border-radius: 50%;
+    display: block;
+}
+
+/* Magnetic Interaction Structure Base */
+.btn-magnetic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 36px;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 6. IMMERSIVE COMPONENT NAVBAR STYLING */
+.dhaba-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(18,11,10,0.95) 70%, rgba(18,11,10,0));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,179,0,0.15);
+}
+.brand-identity {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--clr-cream-white);
+}
+.brand-symbol {
+    font-size: 2.2rem;
+    color: var(--clr-mustard);
+    margin-right: 12px;
+}
+.brand-titles .title-main {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+.brand-titles .title-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--clr-tandoor-orange);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.desktop-nav {
+    display: flex;
+    gap: 2.5rem;
+}
+.desktop-nav a {
+    color: var(--clr-cream-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+}
+.desktop-nav a:hover {
+    color: var(--clr-mustard);
+}
+.btn-nav-reserve {
+    background: var(--clr-tandoor-orange);
+    color: var(--clr-cream-white);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border: 2px solid var(--clr-mustard);
+}
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+.mobile-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: var(--clr-mustard);
+    transition: var(--transition-smooth);
+}
+
+/* Mobile Overlay Application Navigation Drawer */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-dark-bg);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.mobile-nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.mobile-nav-link {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--clr-cream-white);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: var(--transition-smooth);
+}
+.mobile-nav-link:hover {
+    color: var(--clr-mustard);
+    transform: scale(1.1);
+}
+
+/* 7. SECTION ONE - HERO ENTRY POINT SITE ARCHITECTURE */
+.hero-dhaba {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 6% 60px;
+    background: radial-gradient(circle at 70% 50%, rgba(62,39,35,0.4) 0%, rgba(12,11,10,1) 80%), 
+                url('https://images.unsplash.com/photo-1585938338392-50a59970d8ee?auto=format&fit=crop&w=1920&q=40');
+    background-size: cover;
+    background-position: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(18,11,10,0.95) 40%, rgba(18,11,10,0.3));
+    pointer-events: none;
+}
+.hero-truck-art-border {
+    position: absolute;
+    bottom: 0; left: 5%; width: 90%; height: 6px;
+    border-top: var(--truck-art-border);
+    pointer-events: none;
+}
+.hero-main-content {
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+}
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--clr-mustard);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+.animate-fire {
+    animation: firePulse 1.5s infinite alternate;
+    color: var(--clr-tandoor-orange);
+}
+@keyframes firePulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 2px var(--clr-tandoor-orange)); }
+    100% { transform: scale(1.2); filter: drop-shadow(0 0 8px var(--clr-mustard)); }
+}
+.hero-main-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+.hero-lead-text {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: #D7CCC8;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+}
+.hero-action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.action-primary {
+    background: var(--clr-mustard);
+    color: var(--clr-rustic-brown);
+}
+.action-primary::after {
+    content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+    border: 2px solid var(--clr-tandoor-orange); pointer-events: none;
+}
+.action-secondary {
+    background: transparent;
+    color: var(--clr-cream-white);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+.action-secondary:hover {
+    border-color: var(--clr-mustard);
+}
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    pointer-events: none;
+}
+.mouse-scroll {
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    position: relative;
+}
+.mouse-scroll .wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--clr-mustard);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.5s infinite;
+}
+@keyframes scrollWheel {
+    0% { opacity: 1; top: 6px; }
+    100% { opacity: 0; top: 20px; }
+}
+.scroll-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+}
+
+/* 8. SECTION TWO - FIRE & FLAVOR SWIPER SIGNATURE ENGINE */
+.angara-collection-sec {
+    padding: 100px 4%;
+    background: linear-gradient(to bottom, #120B0A, #1E1210);
+    position: relative;
+}
+.angara-swiper {
+    padding: 20px 0 60px !important;
+}
+.fire-card-slide {
+    height: auto;
+}
+.fire-card-inner {
+    background: var(--clr-card-bg);
+    border: 1px solid rgba(255,179,0,0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 0px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-smooth);
+}
+.fire-card-inner:hover {
+    transform: translateY(-10px);
+    border-color: var(--clr-tandoor-orange);
+    box-shadow: 0 15px 30px rgba(255,87,34,0.15);
+}
+.dish-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    background: #2D1A18;
+}
+.dish-image-wrapper img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.fire-card-inner:hover .dish-image-wrapper img {
+    transform: scale(1.1);
+}
+.smoke-overlay-element {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(30,18,16,0.9) 0%, rgba(0,0,0,0) 50%);
+    pointer-events: none;
+}
+.spice-meter-tag {
+    position: absolute;
+    top: 15px; right: 15px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.spice-meter-tag.intense { background: var(--clr-deep-red); color: white; }
+.spice-meter-tag.medium { background: var(--clr-tandoor-orange); color: white; }
+.spice-meter-tag.mild { background: var(--clr-mustard); color: var(--clr-rustic-brown); }
+
+.dish-info-panel {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--clr-mustard);
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.dish-info-panel h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    color: var(--clr-cream-white);
+}
+.dish-info-panel p {
+    color: #D7CCC8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+.interactive-features {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 15px;
+}
+.interactive-features span {
+    font-size: 0.8rem;
+    color: #BCAAA4;
+    background: rgba(255,255,255,0.03);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+.interactive-features i {
+    color: var(--clr-tandoor-orange);
+    margin-right: 4px;
+}
+.swiper-nav-btn {
+    color: var(--clr-mustard) !important;
+}
+.swiper-nav-btn::after {
+    font-size: 1.8rem !important;
+    font-weight: 900;
+}
+.swiper-pagination-bullet-active {
+    background: var(--clr-mustard) !important;
+}
+
+/* 9. SECTION THREE - FEAST EXPLORER FILTERABLE APP ENGINE */
+.feast-explorer-sec {
+    padding: 100px 4%;
+    background: #120B0A;
+}
+.menu-control-station {
+    background: rgba(62,39,35,0.2);
+    border: 1px solid rgba(255,179,0,0.1);
+    padding: 30px;
+    margin-bottom: 4rem;
+}
+.search-vault {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.search-icon {
+    position: absolute;
+    left: 20px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--clr-mustard);
+    font-size: 1.2rem;
+}
+#menu-search-input {
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 18px 20px 18px 55px;
+    color: white;
+    font-size: 1.05rem;
+    border-radius: 0px;
+    transition: var(--transition-smooth);
+}
+#menu-search-input:focus {
+    outline: none;
+    border-color: var(--clr-tandoor-orange);
+    box-shadow: 0 0 15px rgba(255,87,34,0.2);
+}
+.category-scroll-ribbon {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.category-scroll-ribbon::-webkit-scrollbar {
+    height: 4px;
+}
+.filter-chip {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #D7CCC8;
+    padding: 10px 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+}
+.filter-chip:hover, .filter-chip.active {
+    background: var(--clr-mustard);
+    color: var(--clr-rustic-brown);
+    border-color: var(--clr-mustard);
+}
+
+/* App Quality Fluid Menu Grid */
+.menu-dynamic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+.menu-item-card {
+    background: rgba(30,18,16,0.5);
+    border-left: 4px solid var(--clr-mustard);
+    padding: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+.menu-item-card:hover {
+    background: rgba(62,39,35,0.4);
+    transform: scale(1.02);
+}
+.menu-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+.menu-card-top h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--clr-cream-white);
+}
+.item-price-tag {
+    font-family: var(--font-display);
+    color: var(--clr-mustard);
+    font-size: 1.3rem;
+}
+.menu-card-desc {
+    color: #BCAAA4;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+.menu-card-bottom-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+.menu-cat-indicator {
+    color: var(--clr-tandoor-orange);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.recommend-badge {
+    background: rgba(46,125,50,0.15);
+    color: #81C784;
+    padding: 2px 8px;
+    font-weight: 600;
+}
+
+/* 10. SECTION FOUR - PUNJABI MOMENTS MASONRY GALLERY */
+.moments-gallery-sec {
+    padding: 100px 4%;
+    background: #1E1210;
+}
+.gallery-masonry-layout {
+    columns: 3 320px;
+    column-gap: 20px;
+}
+.masonry-item {
+    position: relative;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    overflow: hidden;
+    background: #120B0A;
+    cursor: pointer;
+}
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.masonry-item:hover img {
+    transform: scale(1.06);
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.masonry-item:hover class-caption, .masonry-item:hover .gallery-caption {
+    opacity: 1;
+}
+.gallery-caption h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--clr-mustard);
+}
+
+/* Lightbox Module Platform */
+.lightbox-overlay-vault {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(10,6,5,0.98);
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.lightbox-overlay-vault.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-main-img {
+    max-width: 85%;
+    max-height: 75vh;
+    object-fit: contain;
+    border: 3px solid var(--clr-mustard);
+}
+.lightbox-caption-text {
+    margin-top: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--clr-cream-white);
+    text-transform: uppercase;
+}
+.lightbox-close-btn {
+    position: absolute;
+    top: 30px; right: 40px;
+    font-size: 3.5rem;
+    color: var(--clr-mustard);
+    cursor: pointer;
+}
+
+/* 11. SECTION FIVE - RESERVATION TRANSACT ENGINE */
+.reserve-feast-sec {
+    padding: 100px 4%;
+    background: #120B0A;
+}
+.reserve-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1E1210;
+    border: 2px solid rgba(255,179,0,0.15);
+}
+.reserve-visual-side {
+    position: relative;
+    padding: 60px;
+    display: flex;
+    align-items: flex-end;
+    background: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=50');
+    background-size: cover;
+    background-position: center;
+}
+.visual-side-overlay {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(to top, rgba(18,11,10,0.95) 60%, rgba(18,11,10,0.2));
+}
+.visual-side-content {
+    position: relative;
+    z-index: 2;
+}
+.visual-side-content h3 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.visual-side-content p {
+    color: #D7CCC8;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.quick-stats-row {
+    display: flex;
+    gap: 30px;
+}
+.stat-unit .counter-val {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--clr-mustard);
+}
+.stat-unit p {
+    font-size: 0.8rem;
+    color: #BCAAA4;
+    text-transform: uppercase;
+}
+.truck-art-badge-stamp {
+    position: absolute;
+    top: 30px; left: 30px;
+    background: var(--clr-mustard);
+    color: var(--clr-rustic-brown);
+    padding: 10px;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+.reserve-form-side {
+    padding: 60px;
+    background: #241513;
+}
+.form-header {
+    margin-bottom: 2.5rem;
+}
+.form-header h2 {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: var(--clr-mustard);
+}
+.form-header p {
+    color: #BCAAA4;
+    font-size: 0.9rem;
+}
+#dhaba-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-input-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #D7CCC8;
+    text-transform: uppercase;
+}
+.form-input-group label i {
+    color: var(--clr-tandoor-orange);
+    margin-right: 4px;
+}
+.form-input-group input, .form-input-group select {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 14px;
+    color: white;
+    font-size: 1rem;
+}
+.form-input-group input:focus, .form-input-group select:focus {
+    outline: none;
+    border-color: var(--clr-mustard);
+}
+.form-row-twin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.submit-booking-btn {
+    background: var(--clr-mustard);
+    color: var(--clr-rustic-brown);
+    margin-top: 1rem;
+}
+
+/* 12. IMMERSIVE FOOD DETAIL LAYER INFRASTRUCTURE */
+.food-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(10,6,5,0.96);
+    z-index: 10002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+}
+.food-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.food-modal-container {
+    background: #1E1210;
+    border: 2px solid var(--clr-mustard);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+}
+.food-modal-close {
+    position: absolute;
+    top: 15px; right: 22px;
+    font-size: 2.5rem;
+    color: var(--clr-mustard);
+    cursor: pointer;
+    z-index: 5;
+}
+.food-modal-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.food-modal-visual {
+    position: relative;
+    background: #120B0A;
+    min-height: 100%;
+}
+.food-modal-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.food-modal-details {
+    padding: 45px;
+}
+.modal-badge-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.modal-badge-item {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    background: var(--clr-deep-red);
+    text-transform: uppercase;
+}
+.modal-badge-item.spice {
+    background: var(--clr-tandoor-orange);
+}
+#modal-dish-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+#modal-dish-desc {
+    color: #D7CCC8;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+.ingredient-highlights-panel {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+.ingredient-highlights-panel h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--clr-mustard);
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+#modal-ingredient-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #BCAAA4;
+}
+#modal-ingredient-list li::before {
+    content: '✓ ';
+    color: var(--clr-punjab-green);
+    font-weight: bold;
+}
+.modal-book-btn {
+    background: var(--clr-tandoor-orange);
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+}
+
+/* 13. HIGH DENSITY FOOTER STYLING ARCHITECTURE */
+.dhaba-footer {
+    background: #0C0706;
+    border-top: 4px solid var(--clr-mustard);
+    padding: 80px 4% 30px;
+}
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+.footer-brand-hub {
+    max-width: 550px;
+}
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--clr-mustard);
+    margin-bottom: 1rem;
+}
+.footer-credo {
+    color: #BCAAA4;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.social-links-ribbon {
+    display: flex;
+    gap: 15px;
+}
+.social-links-ribbon a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-cream-white);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+.social-links-ribbon a:hover {
+    background: var(--clr-tandoor-orange);
+    border-color: var(--clr-tandoor-orange);
+}
+.footer-info-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--clr-cream-white);
+    margin-bottom: 1rem;
+}
+.footer-info-block h3 i {
+    color: var(--clr-mustard);
+}
+.footer-info-block p {
+    color: #D7CCC8;
+    margin-bottom: 1.5rem;
+}
+.footer-maps-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--clr-punjab-green);
+    color: white;
+    padding: 14px 24px;
+    font-family: var(--font-display);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #726361;
+}
+.tech-signature {
+    color: var(--clr-tandoor-orange);
+}
+
+/* 14. RESPONSIVE MEDIA QUERIES APPARATUS */
+@media (max-width: 992px) {
+    .desktop-nav { display: none; }
+    .mobile-toggle { display: flex; }
+    .reserve-card-container { grid-template-columns: 1fr; }
+    .food-modal-grid { grid-template-columns: 1fr; }
+    .food-modal-visual { height: 250px; }
+}
+
+@media (max-width: 600px) {
+    .form-row-twin { grid-template-columns: 1fr; }
+    .reserve-form-side, .reserve-visual-side { padding: 30px 20px; }
+    .dhaba-navbar { height: 75px; }
+    .brand-titles .title-main { font-size: 1.1rem; }
+}

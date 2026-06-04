@@ -1,1 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Great Punjabi Dhaba | Experience the Real Angara Fire Kitchen</title>
+    <meta name="description" content="Step into the legendary taste of Punjab. Savor authentic, smoke-infused, butter-rich delicacies from our flaming tandoor. Book your family feast today!">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Great Punjabi Dhaba | Real Angara Fire Kitchen">
+    <meta property="og:description" content="Savor authentic, smoke-infused, butter-rich Punjabi delicacies cooked on open tandoor fires.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585938338392-50a59970d8ee?auto=format&fit=crop&w=1200&q=80">
 
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="The Great Punjabi Dhaba | Real Angara Fire Kitchen">
+    <meta property="twitter:description" content="Savor authentic, smoke-infused, butter-rich Punjabi delicacies cooked on open tandoor fires.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "The Great Punjabi Dhaba",
+      "image": "https://images.unsplash.com/photo-1585938338392-50a59970d8ee?auto=format&fit=crop&w=800&q=80",
+      "url": "https://maps.app.goo.gl/S5JQSbTAnBK2RC4G7",
+      "telephone": "+919999999999",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Highway 1, Punjab Hub",
+        "addressLocality": "Amritsar",
+        "addressRegion": "PB",
+        "postalCode": "143001",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:30"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="custom-cursor">
+        <div class="cursor-core"></div>
+        <div class="cursor-glow"></div>
+    </div>
+
+    <canvas id="fire-canvas"></canvas>
+
+    <div id="dhaba-preloader">
+        <div class="preloader-content">
+            <div class="truck-art-wheel"></div>
+            <div class="preloader-logo">
+                <span class="ek-onkar">ੴ</span>
+                <h2 class="truck-text-glow">THE GREAT PUNJABI DHABA</h2>
+            </div>
+            <p class="preloader-sub">Stoking the Tandoor of Tradition...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="dhaba-navbar">
+        <a href="#" class="brand-identity">
+            <span class="brand-symbol">ੴ</span>
+            <div class="brand-titles">
+                <span class="title-main">THE GREAT PUNJABI DHABA</span>
+                <span class="title-sub">ASLI HIGHWAY FLAVOUR</span>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#highway-entrance" class="nav-link-mag">Enter Dhaba</a>
+            <a href="#angara-showcase" class="nav-link-mag">Fire Collection</a>
+            <a href="#feast-explorer" class="nav-link-mag">The Feast Menu</a>
+            <a href="#reserve-feast" class="nav-link-mag">Reserve Table</a>
+        </nav>
+
+        <div class="action-zone">
+            <a href="#reserve-feast" class="btn-magnetic btn-nav-reserve">
+                <span>RESERVE A SEAT</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-bg-pattern"></div>
+        <div class="mobile-links-container">
+            <a href="#highway-entrance" class="mobile-nav-link">ENTER DHABA</a>
+            <a href="#angara-showcase" class="mobile-nav-link">FIRE COLLECTION</a>
+            <a href="#feast-explorer" class="mobile-nav-link">THE FEAST MENU</a>
+            <a href="#reserve-feast" class="mobile-nav-link">RESERVE TABLE</a>
+        </div>
+    </div>
+
+    <div id="scroll-wrapper">
+
+        <section id="highway-entrance" class="hero-dhaba">
+            <div class="hero-overlay"></div>
+            <div class="hero-truck-art-border"></div>
+            
+            <div class="hero-main-content">
+                <div class="welcome-badge">
+                    <i class="fa-solid fa-fire-flame-curved animate-fire"></i> WELCOME TO HIGHWAY CULTURE
+                </div>
+                <h1 class="split-reveal-text">BRINGING THE ROARING <span class="highlight-fire">TANDOOR ANGARA</span> TO YOUR FAMILY TABLE</h1>
+                <p class="hero-lead-text">Experience real, smoke-infused, butter-loaded heritage recipes forged in the fires of traditional clay ovens. No compromises. Just pure Punjabi passion.</p>
+                
+                <div class="hero-action-row">
+                    <a href="#feast-explorer" class="btn-magnetic action-primary">
+                        <span>EXPLORE THE FEAST</span>
+                    </a>
+                    <a href="#angara-showcase" class="btn-magnetic action-secondary">
+                        <span>VIEW FIRE COLLECTION</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <span class="mouse-scroll">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">SCROLL TO TASTE THE SMOKE</span>
+            </div>
+        </section>
+
+        <section id="angara-showcase" class="angara-collection-sec">
+            <div class="section-header center-align">
+                <span class="truck-art-tag">🔥 CHIEF RECOMMENDATIONS</span>
+                <h2 class="sec-title">THE FIRE & FLAVOR COLLECTION</h2>
+                <p class="sec-subtitle">Witness our signature visual performance dishes. Rich, smokey, and dripping in artisanal butter.</p>
+            </div>
+
+            <div class="swiper-container angara-swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide fire-card-slide" data-dish="cheese-angara">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Cheese Angara" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag intense">HIGH HEAT</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> SIGNATURE</div>
+                                <h3>Cheese Angara</h3>
+                                <p>Molten premium blocks of spiced cheese slow-cooked over wood embers, topped with our secret house butter-gravy mix.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-cheese"></i> Double Stretch</span>
+                                    <span><i class="fa-solid fa-smog"></i> Intense Smoke</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide fire-card-slide" data-dish="paneer-angara-smokey">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1642821369314-100fece91d3c?auto=format&fit=crop&w=800&q=80" alt="Paneer Angara Smokey" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag medium">SMOKEY SHIELD</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> TOP RATED</div>
+                                <h3>Paneer Angara Smokey</h3>
+                                <p>Fresh house-crafted paneer chunks subjected to deep charcoal smoking inside the live clay pot before serving.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-fire"></i> Charcoal Fired</span>
+                                    <span><i class="fa-solid fa-droplet"></i> Butter Drenched</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide fire-card-slide" data-dish="cheese-angara-smokey">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Cheese Angara Smokey" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag intense">EXTREME FIRE</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> EXCLUSIVE</div>
+                                <h3>Cheese Angara Smokey</h3>
+                                <p>Ultimate fusion of liquid cheese lava and real hardwood smoke. Prepared live on special iron grills.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-volcano"></i> Lava Pour</span>
+                                    <span><i class="fa-solid fa-pepper-hot"></i> Spicy Twist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide fire-card-slide" data-dish="paneer-periperi">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Paneer PeriPeri" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag mild">FUSION ZEST</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> CONTEMPORARY</div>
+                                <h3>Paneer PeriPeri</h3>
+                                <p>Traditional Punjabi clay oven paneer marinated with zesty high-impact African Peri-Peri bird's eye chili blend.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-lemon"></i> Tangy Kick</span>
+                                    <span><i class="fa-solid fa-mortar-pestle"></i> Stone Ground</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide fire-card-slide" data-dish="veg-periperi">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Veg PeriPeri" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag medium">FUSION ZEST</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> BALANCED</div>
+                                <h3>Veg PeriPeri</h3>
+                                <p>A colorful dynamic gathering of farm-fresh harvest vegetables tossed over intense flame sparks with robust spices.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-seedling"></i> Farm Fresh</span>
+                                    <span><i class="fa-solid fa-bolt"></i> High Spark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide fire-card-slide" data-dish="dhaba-special">
+                        <div class="fire-card-inner">
+                            <div class="dish-image-wrapper">
+                                <img data-src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Dhaba Special" class="lazy-load">
+                                <div class="smoke-overlay-element"></div>
+                                <span class="spice-meter-tag intense">HERITAGE GOLD</span>
+                            </div>
+                            <div class="dish-info-panel">
+                                <div class="card-meta"><span class="veg-dot"></span> SECRET FAMILY RECIPE</div>
+                                <h3>The Dhaba Special</h3>
+                                <p>Our ultimate multi-generational secret formula curry loaded with dry fruits, butter sheets, and slow charcoal infusion.</p>
+                                <div class="interactive-features">
+                                    <span><i class="fa-solid fa-crown"></i> King Legacy</span>
+                                    <span><i class="fa-solid fa-whiskey-glass"></i> Rich Base</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next swiper-nav-btn"></div>
+                <div class="swiper-button-prev swiper-nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="feast-explorer" class="feast-explorer-sec">
+            <div class="section-header">
+                <span class="truck-art-tag">📖 INTERACTIVE EXPERIENCES</span>
+                <h2 class="sec-title">PUNJABI FEAST EXPLORER</h2>
+                <p class="sec-subtitle">Filter through our multi-generational authentic recipes. Tap or hover on any dish to unlock ingredient breakdowns.</p>
+            </div>
+
+            <div class="menu-control-station">
+                <div class="search-vault">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="menu-search-input" placeholder="Type to hunt signature dishes (e.g. Cheese, Kaju, Paneer)...">
+                </div>
+                
+                <div class="category-scroll-ribbon">
+                    <button class="filter-chip active" data-filter="all">All Specialties</button>
+                    <button class="filter-chip" data-filter="punjabi-specials">Punjabi Specials</button>
+                    <button class="filter-chip" data-filter="paneer-specials">Paneer Specials</button>
+                    <button class="filter-chip" data-filter="cheese-specials">Cheese Specials</button>
+                    <button class="filter-chip" data-filter="kaju-specials">Kaju Specials</button>
+                    <button class="filter-chip" data-filter="rice-biryani">Rice & Biryani</button>
+                    <button class="filter-chip" data-filter="chinese-noodles">Chinese & Noodles</button>
+                    <button class="filter-chip" data-filter="beverages-soups">Beverages & Soups</button>
+                </div>
+            </div>
+
+            <div class="menu-dynamic-grid" id="menu-grid-target">
+                </div>
+        </section>
+
+        <section id="moments-gallery" class="moments-gallery-sec">
+            <div class="section-header center-align">
+                <span class="truck-art-tag">📸 VISUAL SOUL</span>
+                <h2 class="sec-title">PUNJABI MOMENTS GALLERY</h2>
+                <p class="sec-subtitle">Step into our real fire kitchen ecosystem. Authentic people, genuine food culture, memorable experiences.</p>
+            </div>
+
+            <div class="gallery-masonry-layout">
+                <div class="masonry-item item-tall-v" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1763951718950-c536b1295213?auto=format&fit=crop&w=800&q=80" alt="Live Tandoor Cooking" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>Live Open Fire Tandoor</h4></div>
+                </div>
+                <div class="masonry-item item-wide-h" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1000&q=80" alt="Rich Paneer Presentation" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>Sizzling Spiced Masala</h4></div>
+                </div>
+                <div class="masonry-item" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Slow Simmering Dal" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>Overnight Simmered Dal</h4></div>
+                </div>
+                <div class="masonry-item" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Authentic Dhaba Atmosphere" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>Highway Village Vibe</h4></div>
+                </div>
+                <div class="masonry-item item-tall-v" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Fresh Organic Ingredients" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>Hand-harvested Spices</h4></div>
+                </div>
+                <div class="masonry-item item-wide-h" data-tilt>
+                    <img data-src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=80" alt="Traditional Full Thali Feast" class="lazy-load gallery-trigger-img">
+                    <div class="gallery-caption"><h4>The Ultimate Family Feast</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reserve-feast" class="reserve-feast-sec">
+            <div class="reserve-card-container">
+                <div class="reserve-visual-side">
+                    <div class="visual-side-overlay"></div>
+                    <div class="truck-art-badge-stamp">
+                        <span>BURNING AT HIGH TEMP ALWAYS</span>
+                    </div>
+                    <div class="visual-side-content">
+                        <h3>Secure Your Table For The Real Family Feast</h3>
+                        <p>No waiting lists, no complications. Book your traditional charpai cot or premium air-conditioned family booth instantly via our priority ledger booking system.</p>
+                        <div class="quick-stats-row">
+                            <div class="stat-unit">
+                                <span class="counter-val" data-target="45">0</span>+
+                                <p>Charcoal Tandoors</p>
+                            </div>
+                            <div class="stat-unit">
+                                <span class="counter-val" data-target="180">0</span>+
+                                <p>Family Seating Capacity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reserve-form-side">
+                    <div class="form-header">
+                        <h2>RESERVE YOUR FEAST</h2>
+                        <p>Experience original Highway Dhaba culinary execution.</p>
+                    </div>
+
+                    <form id="dhaba-booking-form" onsubmit="event.preventDefault();">
+                        <div class="form-input-group">
+                            <label for="book-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input type="text" id="book-name" required placeholder="e.g. Gurpreet Singh">
+                        </div>
+
+                        <div class="form-input-group">
+                            <label for="book-phone"><i class="fa-solid fa-phone"></i> Mobile Contact Number</label>
+                            <input type="tel" id="book-phone" required placeholder="e.g. +91 98765 43210">
+                        </div>
+
+                        <div class="form-row-twin">
+                            <div class="form-input-group">
+                                <label for="book-guests"><i class="fa-solid fa-users"></i> Guest Count</label>
+                                <select id="book-guests" required>
+                                    <option value="2">2 Diners</option>
+                                    <option value="4" selected>4 Diners (Standard)</option>
+                                    <option value="6">6 Diners (Family Pack)</option>
+                                    <option value="10">10+ Mega Gathering</option>
+                                </select>
+                            </div>
+
+                            <div class="form-input-group">
+                                <label for="book-time"><i class="fa-solid fa-clock"></i> Preferred Hour</label>
+                                <select id="book-time" required>
+                                    <option value="12:00">12:00 PM (Lunch)</option>
+                                    <option value="14:00">02:00 PM (Lunch)</option>
+                                    <option value="19:30">07:30 PM (Dinner)</option>
+                                    <option value="21:00" selected>09:00 PM (Peak Fire)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-magnetic submit-booking-btn">
+                            <span>CONFIRM MY SPOT ON THE HIGHWAY</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="dhaba-footer">
+            <div class="footer-top-row">
+                <div class="footer-brand-hub">
+                    <h2 class="footer-logo">ੴ THE GREAT PUNJABI DHABA</h2>
+                    <p class="footer-credo">Forging cross-generational North Indian culinary heritage over high-energy active charcoal flames. Authentic, bold, family-first culture destination.</p>
+                    <div class="social-links-ribbon">
+                        <a href="#" aria-label="Instagram Connection"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook Connection"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube Channel"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info-block">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> VISIT THE DHABA</h3>
+                    <p>Open 7 Days a week from 11:00 AM till Midnight</p>
+                    <a href="https://maps.app.goo.gl/S5JQSbTAnBK2RC4G7" target="_blank" class="footer-maps-link">
+                        <i class="fa-solid fa-route"></i> LAUNCH LIVE GPS MAP DIRECTIONS
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 The Great Punjabi Dhaba. All Rights Reserved. Forging Butter &amp; Fire Daily.</p>
+                <p class="tech-signature">Engineered with Ultra-Performance WebGL Animation Engines.</p>
+            </div>
+        </footer>
+
+    </div> <div id="gallery-lightbox" class="lightbox-overlay-vault">
+        <span class="lightbox-close-btn">&times;</span>
+        <img class="lightbox-main-img" src="" alt="Expanded View Element">
+        <div class="lightbox-caption-text"></div>
+    </div>
+
+    <div id="food-detail-modal" class="food-modal-overlay">
+        <div class="food-modal-container">
+            <span class="food-modal-close">&times;</span>
+            <div class="food-modal-grid">
+                <div class="food-modal-visual">
+                    <img id="modal-dish-img" src="" alt="Dish Presentation Elements">
+                    <div class="modal-dynamic-fire-halo"></div>
+                </div>
+                <div class="food-modal-details">
+                    <div class="modal-badge-row">
+                        <span id="modal-dish-tag" class="modal-badge-item">POPULAR</span>
+                        <span class="modal-badge-item spice"><i class="fa-solid fa-pepper-hot"></i> CHEF INSPIRED</span>
+                    </div>
+                    <h2 id="modal-dish-title">Dish Title</h2>
+                    <p id="modal-dish-desc">Detailed recipe overview text content goes here contextually.</p>
+                    
+                    <div class="ingredient-highlights-panel">
+                        <h4><i class="fa-solid fa-mortar-pestle"></i> FLAVOUR ARCHITECTURE</h4>
+                        <ul id="modal-ingredient-list">
+                            <li>Real Amul Butter Glazing</li>
+                            <li>Traditional Clay Pot Smoking</li>
+                            <li>100% Hand-Pounded Spice Matrix</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-action-block">
+                        <a href="#reserve-feast" id="modal-reserve-trigger" class="btn-magnetic modal-book-btn">
+                            <span>RESERVE TABLE TO EXPERINCE THIS DISH</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
