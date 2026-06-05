@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashirwad — South Indian Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Sora:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Noise Overlay -->
+<div class="noise-overlay"></div>
+
+<!-- ============================================
+     SECTION 01 — THE FERMENTATION CHAMBER
+     ============================================ -->
+<section class="section fermentation-chamber" id="s01">
+  <canvas id="batter-canvas"></canvas>
+  
+  <div class="fc-content">
+    <div class="fc-tag">Ahmedabad · Gujarat · Since Day One</div>
+    <h1 class="fc-headline">
+      <span class="line" data-splitting>Ashirwad</span>
+      <span class="line sub-line" data-splitting>South Indian</span>
+    </h1>
+    <div class="fc-descriptor">
+      <span>Fermented</span>
+      <span class="dot">·</span>
+      <span>Crafted</span>
+      <span class="dot">·</span>
+      <span>Alive</span>
+    </div>
+    <div class="fc-scroll-cue">
+      <div class="scroll-line"></div>
+      <span>Begin the journey</span>
+    </div>
+  </div>
+
+  <div class="fc-ambient">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+  </div>
+
+  <div class="fc-temp-gauge">
+    <div class="gauge-label">Batter Temp</div>
+    <div class="gauge-value">28°C</div>
+    <div class="gauge-bar"><div class="gauge-fill"></div></div>
+    <div class="gauge-note">Fermenting · 12h</div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 02 — THE FIRST POUR
+     ============================================ -->
+<section class="section first-pour" id="s02">
+  <div class="fp-left">
+    <div class="fp-number">02</div>
+    <div class="fp-label">The First Pour</div>
+    <p class="fp-body">
+      A ladle lifts. The batter cascades onto a black iron tawa seasoned with decades of memory. Every pour is a commitment — a circle forming from nothing but fermented intention.
+    </p>
+    <div class="fp-ingredients">
+      <div class="ing-item" data-delay="0">
+        <div class="ing-circle" style="--c: #f5c842">Rice</div>
+      </div>
+      <div class="ing-item" data-delay="100">
+        <div class="ing-circle" style="--c: #c8a96e">Urad Dal</div>
+      </div>
+      <div class="ing-item" data-delay="200">
+        <div class="ing-circle" style="--c: #8fb96e">Fenugreek</div>
+      </div>
+      <div class="ing-item" data-delay="300">
+        <div class="ing-circle" style="--c: #e8e0d0">Water</div>
+      </div>
+    </div>
+    <div class="fp-ratio">
+      <span class="ratio-text">3 : 1</span>
+      <span class="ratio-label">Rice to Urad Dal ratio</span>
+    </div>
+  </div>
+  <div class="fp-right">
+    <div class="fp-visual">
+      <div class="pour-arc"></div>
+      <div class="pour-drop pd1"></div>
+      <div class="pour-drop pd2"></div>
+      <div class="pour-drop pd3"></div>
+      <div class="tawa-circle">
+        <div class="tawa-inner"></div>
+        <div class="tawa-ripple r1"></div>
+        <div class="tawa-ripple r2"></div>
+        <div class="tawa-ripple r3"></div>
+        <span class="tawa-label">Seasoned Iron Tawa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 03 — THE CIRCULAR CRAFT
+     ============================================ -->
+<section class="section circular-craft" id="s03">
+  <div class="cc-bg-text">DOSA</div>
+  
+  <div class="cc-center">
+    <div class="cc-ring ring-outer">
+      <div class="cc-node cn1">
+        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=120&h=120&fit=crop" alt="Masala Dosa" loading="lazy">
+        <span>Masala Dosa</span>
+      </div>
+      <div class="cc-node cn2">
+        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=120&h=120&fit=crop" alt="Idli" loading="lazy">
+        <span>Idli</span>
+      </div>
+      <div class="cc-node cn3">
+        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=120&h=120&fit=crop" alt="Vada" loading="lazy">
+        <span>Vada</span>
+      </div>
+      <div class="cc-node cn4">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=120&h=120&fit=crop" alt="Uttapam" loading="lazy">
+        <span>Uttapam</span>
+      </div>
+    </div>
+
+    <div class="cc-orbit orbit-1"></div>
+    <div class="cc-orbit orbit-2"></div>
+    <div class="cc-orbit orbit-3"></div>
+
+    <div class="cc-core">
+      <div class="cc-core-inner">
+        <span class="cc-core-label">The</span>
+        <span class="cc-core-big">Circle</span>
+        <span class="cc-core-sub">of Craft</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cc-description">
+    <p>Every dish begins with the same circle — the same spread, the same iron, the same fire. Yet each arrives at the table completely itself.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 04 — THE GOLDEN SURFACE
+     ============================================ -->
+<section class="section golden-surface" id="s04">
+  <div class="gs-header">
+    <div class="gs-eyebrow">The Signature Collection</div>
+    <h2 class="gs-title">Golden<br>Surface</h2>
+  </div>
+
+  <div class="gs-cards">
+
+    <div class="gs-card" data-dish="masala">
+      <div class="gs-card-img">
+        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&h=700&fit=crop" alt="Masala Dosa" loading="lazy">
+        <div class="gs-card-heat">
+          <div class="heat-wave hw1"></div>
+          <div class="heat-wave hw2"></div>
+          <div class="heat-wave hw3"></div>
+        </div>
+        <div class="gs-temp-badge">220°C</div>
+      </div>
+      <div class="gs-card-info">
+        <div class="gs-card-number">01</div>
+        <h3>Masala Dosa</h3>
+        <p>Paper-thin, golden-crisp. Filled with spiced potato masala that carries mustard seeds, curry leaves and the warmth of turmeric.</p>
+        <div class="gs-card-tags">
+          <span>Crispy</span>
+          <span>Spiced</span>
+          <span>Classic</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gs-card featured" data-dish="mysore">
+      <div class="gs-card-img">
+        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&h=700&fit=crop" alt="Mysore Masala Dosa" loading="lazy">
+        <div class="gs-card-heat">
+          <div class="heat-wave hw1"></div>
+          <div class="heat-wave hw2"></div>
+          <div class="heat-wave hw3"></div>
+        </div>
+        <div class="gs-temp-badge">230°C</div>
+        <div class="gs-featured-badge">Chef's Pride</div>
+      </div>
+      <div class="gs-card-info">
+        <div class="gs-card-number">02</div>
+        <h3>Mysore Masala</h3>
+        <p>The royal variant. A layer of red chutney meets the golden surface before the masala folds in — bold, aromatic, unforgettable.</p>
+        <div class="gs-card-tags">
+          <span>Fiery</span>
+          <span>Aromatic</span>
+          <span>Bold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gs-card" data-dish="garlic">
+      <div class="gs-card-img">
+        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&h=700&fit=crop" alt="Garlic Dosa" loading="lazy">
+        <div class="gs-card-heat">
+          <div class="heat-wave hw1"></div>
+          <div class="heat-wave hw2"></div>
+          <div class="heat-wave hw3"></div>
+        </div>
+        <div class="gs-temp-badge">225°C</div>
+      </div>
+      <div class="gs-card-info">
+        <div class="gs-card-number">03</div>
+        <h3>Garlic Dosa</h3>
+        <p>Roasted garlic meets the batter in a union of fragrance and heat. The aroma hits before the plate arrives at your table.</p>
+        <div class="gs-card-tags">
+          <span>Fragrant</span>
+          <span>Roasted</span>
+          <span>Intense</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gs-card" data-dish="uttapam">
+      <div class="gs-card-img">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=700&fit=crop" alt="Uttapam" loading="lazy">
+        <div class="gs-card-heat">
+          <div class="heat-wave hw1"></div>
+          <div class="heat-wave hw2"></div>
+          <div class="heat-wave hw3"></div>
+        </div>
+        <div class="gs-temp-badge">200°C</div>
+      </div>
+      <div class="gs-card-info">
+        <div class="gs-card-number">04</div>
+        <h3>Uttapam</h3>
+        <p>Thick, soft, dotted with fresh vegetables. Where dosa becomes canvas — tomatoes, onions and green chilies pressed into the surface.</p>
+        <div class="gs-card-tags">
+          <span>Soft</span>
+          <span>Loaded</span>
+          <span>Wholesome</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 05 — TEXTURE LABORATORY
+     ============================================ -->
+<section class="section texture-lab" id="s05">
+  <div class="tl-header">
+    <span class="tl-number">05</span>
+    <h2 class="tl-title">Texture<br>Laboratory</h2>
+  </div>
+
+  <div class="tl-grid">
+    <div class="tl-item" data-texture="crunch">
+      <div class="tl-visual">
+        <div class="crunch-lines">
+          <div class="cl cl1"></div>
+          <div class="cl cl2"></div>
+          <div class="cl cl3"></div>
+          <div class="cl cl4"></div>
+          <div class="cl cl5"></div>
+        </div>
+      </div>
+      <div class="tl-info">
+        <h3>Crunch</h3>
+        <p>The moment the dosa edge meets your teeth. A sound that signals perfection on the tawa.</p>
+        <div class="tl-intensity">
+          <div class="int-bar" style="--w:92%"></div>
+          <span>92% Crisp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item" data-texture="steam">
+      <div class="tl-visual">
+        <div class="steam-particles">
+          <div class="sp sp1"></div>
+          <div class="sp sp2"></div>
+          <div class="sp sp3"></div>
+          <div class="sp sp4"></div>
+          <div class="sp sp5"></div>
+        </div>
+      </div>
+      <div class="tl-info">
+        <h3>Steam</h3>
+        <p>Idli rising from the mould. The softest food arrives on a cloud of its own making.</p>
+        <div class="tl-intensity">
+          <div class="int-bar" style="--w:78%"></div>
+          <span>78% Soft</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item" data-texture="sponge">
+      <div class="tl-visual">
+        <div class="sponge-grid">
+          <div class="sg-dot"></div><div class="sg-dot"></div><div class="sg-dot"></div>
+          <div class="sg-dot"></div><div class="sg-dot"></div><div class="sg-dot"></div>
+          <div class="sg-dot"></div><div class="sg-dot"></div><div class="sg-dot"></div>
+        </div>
+      </div>
+      <div class="tl-info">
+        <h3>Sponge</h3>
+        <p>Vada's interior. Fermented air pockets that hold the chutney and tell the story of time.</p>
+        <div class="tl-intensity">
+          <div class="int-bar" style="--w:85%"></div>
+          <span>85% Airy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item" data-texture="golden">
+      <div class="tl-visual">
+        <div class="golden-surface-vis"></div>
+      </div>
+      <div class="tl-info">
+        <h3>Golden</h3>
+        <p>The Maillard reaction at work. Where batter becomes bronze — the language of perfect heat.</p>
+        <div class="tl-intensity">
+          <div class="int-bar" style="--w:96%"></div>
+          <span>96% Caramelised</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 06 — THE CHUTNEY SPECTRUM
+     ============================================ -->
+<section class="section chutney-spectrum" id="s06">
+  <div class="cs-left">
+    <div class="cs-eyebrow">Accompaniments</div>
+    <h2 class="cs-title">The Chutney<br>Spectrum</h2>
+    <p class="cs-body">No dosa stands alone. Each is completed by its companions — chutneys crafted daily, sambar simmered from sunrise, each a world entire.</p>
+  </div>
+
+  <div class="cs-swatches">
+    <div class="cs-swatch" data-chutney="coconut" style="--chutney-color: #f0e6c8">
+      <div class="cs-swatch-color"></div>
+      <div class="cs-swatch-info">
+        <h4>Coconut Chutney</h4>
+        <p>Freshly grated coconut, green chilli, ginger. Tempered with mustard and curry leaf.</p>
+        <div class="cs-flavour-tags">
+          <span>Cooling</span><span>Fresh</span><span>Aromatic</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-swatch" data-chutney="tomato" style="--chutney-color: #c84b2f">
+      <div class="cs-swatch-color"></div>
+      <div class="cs-swatch-info">
+        <h4>Tomato Chutney</h4>
+        <p>Roasted tomatoes, dried red chillies and tamarind. A fiery, tangy counterpart.</p>
+        <div class="cs-flavour-tags">
+          <span>Tangy</span><span>Spicy</span><span>Bold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-swatch" data-chutney="sambar" style="--chutney-color: #8b4513">
+      <div class="cs-swatch-color"></div>
+      <div class="cs-swatch-info">
+        <h4>Sambar</h4>
+        <p>Toor dal simmered with vegetables, tamarind, and the signature sambar powder of Tamil Nadu.</p>
+        <div class="cs-flavour-tags">
+          <span>Earthy</span><span>Deep</span><span>Warming</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-swatch" data-chutney="mint" style="--chutney-color: #2d7a44">
+      <div class="cs-swatch-color"></div>
+      <div class="cs-swatch-info">
+        <h4>Mint Chutney</h4>
+        <p>Fresh mint, coriander and yoghurt. The cool green that brightens every bite.</p>
+        <div class="cs-flavour-tags">
+          <span>Cool</span><span>Bright</span><span>Herbal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 07 — THE SOUTH INDIAN TABLE
+     ============================================ -->
+<section class="section south-indian-table" id="s07">
+  <div class="sit-bg-image">
+    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1600&h=900&fit=crop" alt="Family dining" loading="lazy">
+    <div class="sit-overlay"></div>
+  </div>
+
+  <div class="sit-content">
+    <div class="sit-eyebrow">Where Families Gather</div>
+    <h2 class="sit-title">The South<br>Indian Table</h2>
+    <p class="sit-body">
+      A table where conversation flows as freely as the filter coffee. Where grandparents, parents and children speak the same language — one dosa at a time.
+    </p>
+    
+    <div class="sit-pillars">
+      <div class="sit-pillar">
+        <div class="sit-pillar-icon">⬡</div>
+        <h4>Family First</h4>
+        <p>Every table is a gathering. Every meal is a memory.</p>
+      </div>
+      <div class="sit-pillar">
+        <div class="sit-pillar-icon">⬡</div>
+        <h4>Daily Fresh</h4>
+        <p>Batter fermented overnight. Chutneys ground at sunrise.</p>
+      </div>
+      <div class="sit-pillar">
+        <div class="sit-pillar-icon">⬡</div>
+        <h4>Genuine Craft</h4>
+        <p>No shortcuts. No compromises. Just authentic preparation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 08 — THE GREEN ROOM
+     ============================================ -->
+<section class="section green-room" id="s08">
+  <div class="gr-grid">
+    <div class="gr-text-block">
+      <span class="gr-number">08</span>
+      <h2 class="gr-title">The Green<br>Room</h2>
+      <p>Signature jade seating. Morning light through clean glass. The hum of the tawa. This is where Ahmedabad slows down and tastes something real.</p>
+      <div class="gr-features">
+        <div class="gr-feat">
+          <div class="gr-feat-dot"></div>
+          <span>Fast-casual pace</span>
+        </div>
+        <div class="gr-feat">
+          <div class="gr-feat-dot"></div>
+          <span>Everyday dining</span>
+        </div>
+        <div class="gr-feat">
+          <div class="gr-feat-dot"></div>
+          <span>Family-friendly space</span>
+        </div>
+        <div class="gr-feat">
+          <div class="gr-feat-dot"></div>
+          <span>Affordable authenticity</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gr-image-block">
+      <div class="gr-img main-img">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&h=500&fit=crop" alt="Restaurant interior" loading="lazy">
+      </div>
+      <div class="gr-img secondary-img">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Dining experience" loading="lazy">
+      </div>
+      <div class="gr-accent-box">
+        <span class="gr-accent-num">4.8</span>
+        <span class="gr-accent-label">Google Rating</span>
+        <div class="gr-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 09 — THE DAILY RITUAL
+     ============================================ -->
+<section class="section daily-ritual" id="s09">
+  <div class="dr-header">
+    <h2 class="dr-title">The Daily<br>Ritual</h2>
+    <p>From the first batter pour to the last served plate — a day at Ashirwad moves with quiet, purposeful craft.</p>
+  </div>
+
+  <div class="dr-timeline">
+    <div class="dr-line"></div>
+    
+    <div class="dr-step ds1">
+      <div class="dr-time">5:00 AM</div>
+      <div class="dr-dot"></div>
+      <div class="dr-content">
+        <h4>The Awakening</h4>
+        <p>Batter has fermented through the night. The kitchen stirs. Tawas heat. The day's first ritual begins.</p>
+      </div>
+    </div>
+
+    <div class="dr-step ds2">
+      <div class="dr-time">6:30 AM</div>
+      <div class="dr-dot"></div>
+      <div class="dr-content">
+        <h4>Chutney Hour</h4>
+        <p>Coconut is grated. Tomatoes roast. Sambar simmers. The accompaniments that complete every plate.</p>
+      </div>
+    </div>
+
+    <div class="dr-step ds3">
+      <div class="dr-time">8:00 AM</div>
+      <div class="dr-dot"></div>
+      <div class="dr-content">
+        <h4>First Guests</h4>
+        <p>The doors open. The first dosa spreads across the iron. Ahmedabad begins its morning the right way.</p>
+      </div>
+    </div>
+
+    <div class="dr-step ds4">
+      <div class="dr-time">12:00 PM</div>
+      <div class="dr-dot"></div>
+      <div class="dr-content">
+        <h4>The Lunch Rush</h4>
+        <p>Families, office workers, regulars. The tawa never cools. Every order handled with the same care as the first.</p>
+      </div>
+    </div>
+
+    <div class="dr-step ds5">
+      <div class="dr-time">Evening</div>
+      <div class="dr-dot"></div>
+      <div class="dr-content">
+        <h4>The Final Pour</h4>
+        <p>The last batter of the day. The kitchen settles. Tomorrow's fermentation begins in the quiet of the night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 10 — VISIT ASHIRWAD
+     ============================================ -->
+<section class="section visit-ashirwad" id="s10">
+  <div class="va-split">
+    <div class="va-left">
+      <div class="va-eyebrow">Find Us</div>
+      <h2 class="va-title">Visit<br>Ashirwad</h2>
+      <p class="va-body">We are not hard to find — just follow the aroma. A short walk, a familiar address, a table that will feel like home.</p>
+      
+      <div class="va-details">
+        <div class="va-detail">
+          <div class="va-detail-icon">◈</div>
+          <div>
+            <h5>Location</h5>
+            <p>Ashirwad South Indian Restaurant<br>Ahmedabad, Gujarat</p>
+          </div>
+        </div>
+        <div class="va-detail">
+          <div class="va-detail-icon">◈</div>
+          <div>
+            <h5>Hours</h5>
+            <p>Open Daily<br>8:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+        <div class="va-detail">
+          <div class="va-detail-icon">◈</div>
+          <div>
+            <h5>Dining Style</h5>
+            <p>Fast Casual · Family<br>Walk-ins Welcome</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://maps.app.goo.gl/649PeFPCmEyVVmyx8" target="_blank" class="va-cta">
+        <span>Get Directions</span>
+        <div class="va-cta-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="va-right">
+      <div class="va-map-placeholder">
+        <div class="va-map-inner">
+          <div class="va-map-pin">
+            <div class="va-pin-dot"></div>
+            <div class="va-pin-ring r1"></div>
+            <div class="va-pin-ring r2"></div>
+          </div>
+          <div class="va-map-label">Ashirwad</div>
+          <div class="va-map-grid">
+            <div class="vg-line vg-h"></div>
+            <div class="vg-line vg-v"></div>
+            <div class="vg-line vg-h2"></div>
+            <div class="vg-line vg-v2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="va-footer">
+    <div class="va-footer-logo">Ashirwad</div>
+    <p class="va-footer-tagline">Fermented with love. Served with pride.</p>
+    <div class="va-footer-divider"></div>
+    <p class="va-footer-copy">© 2025 Ashirwad South Indian Restaurant · Ahmedabad, Gujarat</p>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
