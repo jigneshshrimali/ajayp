@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Restaurant — Authentic Flavor Narrative</title>
+    <meta name="description" content="Experience the rich culinary landscape of Ravi Restaurant. From local Kathiyavadi traditions to modern sizzlers. Stay with us and feel like home.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Native Interaction Canvas Background -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Custom Micro-Interaction Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Editorial Navigation Bar -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-main">RAVI</span>
+            <span class="brand-sub">RESTAURANT</span>
+        </div>
+        <div class="nav-links">
+            <a href="#narrative" class="nav-link">Narrative</a>
+            <a href="#atmosphere" class="nav-link">Ambience</a>
+            <a href="#menu-explorer" class="nav-link-btn">Explore Menu</a>
+        </div>
+    </nav>
+
+    <!-- Immersive Editorial Hero Section -->
+    <header class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-text-block">
+                <div class="motto-badge">Authentic Gujarati &amp; Multi-Cuisine</div>
+                <h1 class="hero-title">Stay With Us <br><span class="serif-accent">And Feel Like Home.</span></h1>
+                <p class="hero-lead">An authentic, highly practical, community-centric dining space translating decades of regional recipes into vibrant, modern flavors.</p>
+                <div class="hero-cta-group">
+                    <a href="#menu-explorer" class="cta-primary">Browse Dishes</a>
+                    <a href="https://maps.app.goo.gl/xYMgsEEAg135TGpU6" target="_blank" rel="noopener" class="cta-secondary">Find Us On Maps</a>
+                </div>
+            </div>
+            <div class="hero-visual-frame">
+                <div class="asymmetric-image-wrapper" data-speed="2">
+                    <img src="Interior.png" alt="Ravi Restaurant Authentic Menu Artwork" class="hero-img-main" loading="eager">
+                </div>
+                <div class="floating-badge-element">
+                    <span class="badge-accent">રવિ</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Asymmetrical Storytelling Grid -->
+    <section id="narrative" class="narrative-section">
+        <div class="section-label">[ 01 / Spatial Context ]</div>
+        <div class="narrative-layout">
+            <div class="narrative-col text-col">
+                <h2 class="editorial-heading">The Textures of Community Dining</h2>
+                <p class="body-text">Step into an environment explicitly designed for shared experiences. Our dining spaces balance modern structural cleanliness with bold, high-energy textured crimson feature walls, cultivating an atmosphere that transitions seamlessly from bustling family lunches to late-night neighborhood conversations.</p>
+            </div>
+            <div class="narrative-col image-col-wide">
+                <div class="parallax-media-container">
+                    <img src="unnamed (2).jpg" alt="Ravi Restaurant Inside Dynamic Seating Ambience" class="narrative-img" loading="lazy">
+                    <div class="media-caption">The Main Dining Hall - Balancing Textured Terracotta Walls with Deep Slate Seating elements.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Highlights Frame Showcase -->
+    <section class="culinary-storytelling">
+        <div class="section-label">[ 02 / Gastronomy Focus ]</div>
+        <div class="editorial-showcase-grid">
+            <div class="showcase-card large-span">
+                <div class="mask-reveal-container">
+                    <img src="sizzler.png" alt="Signature Indo-Chinese Sizzler Plate Presentation" class="showcase-img" loading="lazy">
+                </div>
+                <div class="showcase-meta">
+                    <h3>Signature Pan-Seared Sizzlers</h3>
+                    <p>High-temperature culinary compositions bringing together freshly sliced local crisp vegetables and custom house-infused spiced gravies served on smoking plates.</p>
+                </div>
+            </div>
+            <div class="showcase-card normal-span">
+                <div class="mask-reveal-container">
+                    <img src="noodles.png" alt="Fresh Hakka Noodles Street Style Composition" class="showcase-img" loading="lazy">
+                </div>
+                <div class="showcase-meta">
+                    <h3>Street-Style Noodles</h3>
+                    <p>Masterfully tossed noodles featuring vibrant local peppers and premium sauce bases tailored for accurate regional palates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Menu Interactive Explorer Experience -->
+    <section id="menu-explorer" class="menu-explorer-section">
+        <div class="menu-sticky-header">
+            <div class="menu-header-top">
+                <h2 class="menu-main-title">Culinary Catalog</h2>
+                <div class="search-box-wrapper">
+                    <input type="text" id="menu-search" placeholder="Filter dishes (e.g. Dhosa, Bateta, Soup)..." aria-label="Search Menu Dishes">
+                </div>
+            </div>
+            <!-- Dynamic Custom Navigation Category Tabs -->
+            <div class="category-tabs-container" id="category-tabs">
+                <button class="tab-btn active" data-category="all">Full Menu</button>
+                <button class="tab-btn" data-category="kathiyavadi">Kathiyavadi</button>
+                <button class="tab-btn" data-category="south-indian">South Indian</button>
+                <button class="tab-btn" data-category="starter-soup">Soups &amp; Starters</button>
+                <button class="tab-btn" data-category="chinese-rice">Chinese &amp; Rice</button>
+                <button class="tab-btn" data-category="thali-sizzler">Thalis &amp; Sizzlers</button>
+            </div>
+        </div>
+
+        <!-- The Interactive Grid Dynamic Architecture -->
+        <div class="menu-grid-dynamic" id="menu-items-grid">
+            <!-- Items generated programmatically by script.js -->
+        </div>
+    </section>
+
+    <!-- Ambient Imagery Grid Section -->
+    <section id="atmosphere" class="atmosphere-gallery">
+        <div class="section-label">[ 03 / Visual Epilogue ]</div>
+        <div class="gallery-asymmetric-mosaic">
+            <div class="mosaic-item block-1">
+                <img src="unnamed (5).jpg" alt="Traditional Gujarati Regional Menu Page Print Document" loading="lazy">
+            </div>
+            <div class="mosaic-item block-2">
+                <img src="unnamed (6).jpg" alt="South Indian Variety and Extra Accompaniments List" loading="lazy">
+            </div>
+            <div class="mosaic-item block-3">
+                <img src="unnamed (7).jpg" alt="Indo Chinese Soup and Starter Menu Page Layout" loading="lazy">
+            </div>
+            <div class="mosaic-item block-4">
+                <img src="unnamed (8).jpg" alt="Kathiyavadi Specialties Printed Menu Document" loading="lazy">
+            </div>
+            <div class="mosaic-item block-5">
+                <img src="unnamed.webp" alt="Authentic Thali Offerings Page Design" loading="lazy">
+            </div>
+            <div class="mosaic-item block-6">
+                <img src="unnamed (1).webp" alt="Chinese Rice Noodles and Noodles Page" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Structural Minimalist Footer -->
+    <footer class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-info-brand">
+                <h3>RAVI RESTAURANT</h3>
+                <p class="footer-motto">"Stay with us and feel like home."</p>
+            </div>
+            <div class="footer-coordinates">
+                <h4>Coordinates</h4>
+                <p>Near National Highway Context</p>
+                <a href="https://maps.app.goo.gl/xYMgsEEAg135TGpU6" target="_blank" rel="noopener" class="footer-map-link">Launch Map Navigation ↗</a>
+            </div>
+            <div class="footer-hours">
+                <h4>Service Cycles</h4>
+                <p>Gujarati Thali: 11:00 AM – 3:00 PM</p>
+                <p>Punjabi Thali: 11:00 AM – 3:00 PM | 7:00 PM – 11:00 PM</p>
+                <p>A La Carte Options: Available Throughout Operational Windows</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Ravi Restaurant. Built with custom editorial visual systems.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
