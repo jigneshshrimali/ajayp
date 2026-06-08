@@ -1,1 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Liora | Central Dr. Yagnik Road, Rajkot</title>
+    <meta name="description" content="Stay comfortably and eat comfortably at Hotel Liora, Rajkot. Premium modern rooms, spacious family suites, clean & hygienic washrooms, and an exceptional in-house restaurant on Dr. Yagnik Road.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Library Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Lenis Smooth Scroll Wrapper -->
+    <div class="scroll-container">
+
+        <!-- Header / Navigation Bar -->
+        <header class="main-header">
+            <div class="header-container">
+                <a href="#" class="logo-area" data-target="home">
+                    <span class="logo-title">Hotel Liora</span>
+                    <span class="logo-sub">RAJKOT</span>
+                </a>
+                <nav class="desktop-nav">
+                    <button class="nav-link active" data-target="home">Home</button>
+                    <button class="nav-link" data-target="rooms">Our Rooms</button>
+                    <button class="nav-link" data-target="dining">Dining Restaurant</button>
+                    <button class="nav-link" data-target="gallery">Photo Gallery</button>
+                </nav>
+                <div class="header-actions">
+                    <a href="tel:8809955055" class="btn btn-secondary call-btn-top">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>8809955055</span>
+                    </a>
+                    <button class="mobile-toggle" aria-label="Toggle Menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="mobile-menu-drawer">
+            <div class="drawer-links">
+                <button class="drawer-link" data-target="home">Home</button>
+                <button class="drawer-link" data-target="rooms">Our Rooms</button>
+                <button class="drawer-link" data-target="dining">Dining Restaurant</button>
+                <button class="drawer-link" data-target="gallery">Photo Gallery</button>
+            </div>
+            <div class="drawer-footer">
+                <a href="tel:8809955055" class="drawer-action-btn font-call">Call Hotel</a>
+                <a href="https://wa.me/918809955055" target="_blank" class="drawer-action-btn font-wa">WhatsApp Booking</a>
+            </div>
+        </div>
+
+        <!-- MAIN DYNAMIC CONTENT ROUTER PANELS -->
+        <main class="content-wrapper">
+
+            <!-- ================= HOME PAGE PANEL ================= -->
+            <section id="panel-home" class="page-panel active">
+                
+                <!-- Hero Section -->
+                <div class="hero-block">
+                    <div class="hero-bg-wrapper">
+                        <img src="1.jpg" alt="Hotel Liora Premium Room Stay" class="hero-bg-img">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="hero-content">
+                        <div class="tagline-reveal"><span class="line-inner">Welcome to Premium Comfort in Central Rajkot</span></div>
+                        <h1 class="hero-title">Stay Comfortably.<br>Eat Comfortably.</h1>
+                        <p class="hero-desc">Located on premium Dr. Yagnik Road, right opposite The Imperial Palace Hotel. Enjoy spacious rooms, completely hygienic spaces, and exceptional food at our in-house terrace restaurant.</p>
+                        <div class="hero-cta-group">
+                            <a href="https://wa.me/918809955055" target="_blank" class="btn btn-primary">
+                                <span>Book Stay on WhatsApp</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <a href="tel:8809955055" class="btn btn-outline">Call Direct Desk</a>
+                        </div>
+                    </div>
+                    <div class="hero-scroll-indicator">
+                        <span class="mouse-icon"><span class="wheel"></span></span>
+                        <span>Scroll to Explore</span>
+                    </div>
+                </div>
+
+                <!-- Core Value Architecture Grid -->
+                <div class="section-padding value-section">
+                    <div class="container">
+                        <div class="section-grid-header">
+                            <div>
+                                <span class="section-subtitle">THE COMPLETE STAY CONCEPT</span>
+                                <h2 class="section-title">Everything you need, right under one single roof.</h2>
+                            </div>
+                            <p class="header-side-text">We have built our hospitality around what modern business travelers and families expect: zero compromises on cleanliness, premium food access, and highly spacious living spaces.</p>
+                        </div>
+
+                        <div class="value-matrix">
+                            <div class="value-card">
+                                <div class="value-icon-box">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                                </div>
+                                <h3>Prime Location</h3>
+                                <p>Situated on the 2nd floor, Dr. Yagnik Road. Directly opposite The Imperial Palace Hotel, placing you right next to premium shopping centers, business zones, and top travel hubs.</p>
+                            </div>
+                            <div class="value-card">
+                                <div class="value-icon-box">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                </div>
+                                <h3>Value For Money</h3>
+                                <p>Enjoy premium hospitality starting at highly genuine price points. Premium quality bedding, elegant design, and prompt service without any luxury inflation.</p>
+                            </div>
+                            <div class="value-card">
+                                <div class="value-icon-box">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                </div>
+                                <h3>Clean & Hygienic</h3>
+                                <p>Strict regular cleaning guidelines. From our highly spacious modern washrooms to crisp bed linens, sanitization and orderliness are our absolute priority.</p>
+                            </div>
+                            <div class="value-card">
+                                <div class="value-icon-box">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                                </div>
+                                <h3>Delicious In-House Dining</h3>
+                                <p>Our beautiful terrace restaurant prepares amazing multi-cuisine menu options fresh daily. Never face the hassle of leaving the hotel looking for high-quality food.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Building Facade Highlight Banner / Split Screen -->
+                <div class="facade-banner">
+                    <div class="facade-image-panel">
+                        <img src="6.jpg" alt="Hotel Liora Commercial Facade Building Dr Yagnik Road" class="parallax-img">
+                    </div>
+                    <div class="facade-content-panel">
+                        <span class="badge">EASY ACCESSIBILITY</span>
+                        <h2>A Premium Address Above High-End Landmarks</h2>
+                        <p>Located immediately in the prime commercial building on Dr. Yagnik Road, right above the renowned Tribhovandas Bhimji Zaveri (TBZ) showroom. Safe, recognizable, well-lit, and perfectly secure for families and solo corporate executives arriving at any hour of the day or night.</p>
+                        <div class="facade-features">
+                            <div class="f-item"><strong>2nd Floor</strong> Access via Lift</div>
+                            <div class="f-item"><strong>Opposite</strong> The Imperial Palace</div>
+                            <div class="f-item"><strong>24/7</strong> Safe In-House Front Assistance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Room Preview Block -->
+                <div class="section-padding home-rooms-preview">
+                    <div class="container">
+                        <div class="complex-title-block">
+                            <h2>Our Comfortable Accommodations</h2>
+                            <button class="text-link-btn view-all-rooms-trigger" data-target="rooms">View All Rooms & Prices &rarr;</button>
+                        </div>
+
+                        <div class="preview-room-row">
+                            <div class="preview-img-container">
+                                <img src="9.jpg" alt="Hotel Liora Family Suite Room">
+                            </div>
+                            <div class="preview-details-container">
+                                <span class="room-tag">Spacious & Family Friendly</span>
+                                <h3>Premium Executive Suite Room</h3>
+                                <p>Our highly preferred room category featuring beautiful polished flooring, rich dark-wood custom cabinetry, cozy sofa arrangements, integrated workspace desk, and large comfortable beds dressed in clean linens.</p>
+                                <div class="room-amenities-mini">
+                                    <span>Split AC</span>
+                                    <span>Flat Screen TV</span>
+                                    <span>Tea/Coffee Setup</span>
+                                    <span>Hot Water Kettle</span>
+                                    <span>Spacious Wardrobes</span>
+                                </div>
+                                <div class="price-strip">
+                                    <div class="p-label">Starting Price</div>
+                                    <div class="p-value">₹1,800* <span class="per-night">/ Night</span></div>
+                                </div>
+                                <button class="btn btn-secondary view-all-rooms-trigger" data-target="rooms">Check Rates & Options</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-House Dining Teaser Section -->
+                <div class="dining-teaser section-padding">
+                    <div class="container">
+                        <div class="dining-teaser-grid">
+                            <div class="dt-content">
+                                <span class="section-subtitle">NEVER LEAVE FOR A QUALITY MEAL</span>
+                                <h2 class="section-title">The Rooftop Terrace Restaurant Experience</h2>
+                                <p>Experience incredible dining ease at our beautifully styled rooftop in-house restaurant. With an atmospheric, warm ceiling setup and bright ambient string lighting, it provides a warm environment for family get-togethers or evening downtime after professional tasks.</p>
+                                <blockquote class="dining-quote">
+                                    "The convenience of having great breakfast options, heavy lunches, and proper dinner spreads directly on-site completely redefines your travel comfort in Rajkot."
+                                </blockquote>
+                                <button class="btn btn-primary go-dining-trigger" data-target="dining">Explore Restaurant Menu</button>
+                            </div>
+                            <div class="dt-visual">
+                                <div class="dt-img-mask">
+                                    <img src="restaurant.jpg" alt="Hotel Liora In-house Terrace Restaurant Ambience" class="reveal-scroll-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Reviews Section -->
+                <div class="section-padding reviews-block">
+                    <div class="container">
+                        <div class="center-title text-center">
+                            <span class="section-subtitle">REAL GUEST REVIEWS</span>
+                            <h2 class="section-title">What travelers say about their comfortable stay</h2>
+                        </div>
+                        
+                        <div class="reviews-grid">
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"The room was exceptionally clean & hygienic. The dark wood furniture layout is very neat, and the bed is highly comfortable. Having a premium restaurant right inside the hotel saved us a lot of trouble with family dinners. Excellent service!"</p>
+                                <div class="reviewer-meta">
+                                    <strong>Rajesh Shah</strong> <span class="r-type">Business Traveler</span>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"Located exactly on Dr. Yagnik Road, just opposite Imperial Palace, making it very easy to find. The check-in was exceptionally easy. The washrooms are very spacious and maintained with pristine hygiene. Best choice for families."</p>
+                                <div class="reviewer-meta">
+                                    <strong>Meera Patel</strong> <span class="r-type">Family Vacation</span>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"Great value for money. They provide an incredible stay package with proper multi-cuisine breakfast and reliable 24/7 assistance desk. The staff is polite, friendly, and quick to respond."</p>
+                                <div class="reviewer-meta">
+                                    <strong>Amit Verma</strong> <span class="r-type">Corporate Executive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ================= ROOMS PAGE PANEL ================= -->
+            <section id="panel-rooms" class="page-panel">
+                <div class="inner-page-hero">
+                    <div class="container">
+                        <span class="section-subtitle">ACCOMMODATIONS MENU</span>
+                        <h1 class="inner-title">Spacious Rooms For Corporate & Family Stays</h1>
+                        <p class="inner-desc">Every room features absolute cleanliness, rich walnut wood accents, modern amenities, and a highly spacious configuration to guarantee an excellent stay experience.</p>
+                    </div>
+                </div>
+
+                <div class="container section-padding">
+                    <!-- Room Category 1 -->
+                    <div class="full-room-card">
+                        <div class="frc-gallery">
+                            <div class="swiper roomSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="1.jpg" alt="Premium Standard Twin Setup View 1"></div>
+                                    <div class="swiper-slide"><img src="2.jpg" alt="Premium Standard Amenities View 2"></div>
+                                    <div class="swiper-slide"><img src="4.jpg" alt="Premium Standard Space View 3"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="frc-details">
+                            <span class="price-tag">From ₹1,499* / Night</span>
+                            <h2>Premium Standard Room</h2>
+                            <p>Perfect for solo corporate professionals or couples. Intelligently constructed layout utilizing space optimally, featuring comfortable premium bedding, integrated side tables, soft modern lighting, and a functional work counter.</p>
+                            
+                            <h4 class="sub-h">Room Comfort Highlights:</h4>
+                            <ul class="room-bullet-list">
+                                <li>Fully Split Air Conditioning with remote climate configuration</li>
+                                <li>Flat Screen LED TV with multi-language entertainment packages</li>
+                                <li>Dedicated tea/coffee counter platform with electric hot kettle</li>
+                                <li>Cleaned linen change-outs daily & thorough room hygiene cycles</li>
+                            </ul>
+
+                            <div class="frc-footer-cta">
+                                <a href="https://wa.me/918809955055?text=I%20am%20interested%20in%20the%20Premium%20Standard%20Room" target="_blank" class="btn btn-primary">Check Room Availability</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Room Category 2 -->
+                    <div class="full-room-card reverse">
+                        <div class="frc-gallery">
+                            <div class="swiper roomSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="9.jpg" alt="Executive Family Comfort Suite Frontal"></div>
+                                    <div class="swiper-slide"><img src="1.jpg" alt="Executive Suite Side View"></div>
+                                    <div class="swiper-slide"><img src="4.jpg" alt="Executive Suite Wide Layout"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="frc-details">
+                            <span class="price-tag">From ₹2,499* / Night</span>
+                            <h2>Executive Family Suite Room</h2>
+                            <p>Designed for traveling families or corporate directors requiring extended relaxation lounge space. Outfitted with premium marble style tile layouts, extended comfortable lounge sofas, and larger spatial footprint layouts for absolute ease.</p>
+                            
+                            <h4 class="sub-h">Room Comfort Highlights:</h4>
+                            <ul class="room-bullet-list">
+                                <li>Extra sitting sofa lounge area with a sleek matching wood table (`9.jpg`)</li>
+                                <li>Vast floor space allowing smooth multi-luggage placement comfort</li>
+                                <li>Full height modern wardrobe storage system</li>
+                                <li>Interconnected quick access to immediate 24/7 assistance button systems</li>
+                            </ul>
+
+                            <div class="frc-footer-cta">
+                                <a href="https://wa.me/918809955055?text=I%20am%20interested%20in%20the%20Executive%20Family%20Suite%20Room" target="_blank" class="btn btn-primary">Check Suite Availability</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dedicated Washroom Quality Sub-Section to Build Trust -->
+                    <div class="washroom-trust-block">
+                        <div class="wt-text">
+                            <span class="badge">CRITICAL HYGIENE FOCUS</span>
+                            <h3>Spacious, Pristine Modern Washrooms</h3>
+                            <p>We recognize that washroom cleanliness dictates overall travel peace of mind. As visualized accurately in `washroom.jpg` and `5.jpg`, our guest bathrooms are heavily detailed with complete travertine natural earth tone stone cladding, contemporary white ceramic top-mount basins, modern wall-hung European style commodes, professional health faucets, and independent glass partition logic blocks for excellent dry/wet separation.</p>
+                            <div class="wt-points">
+                                <div class="wt-p"><span></span> 24/7 Consistent Hot & Cold Water Access</div>
+                                <div class="wt-p"><span></span> Fresh laundered dry towel sets replaced every morning</div>
+                                <div class="wt-p"><span></span> Premium liquid hand-washes and shower dispensers</div>
+                            </div>
+                        </div>
+                        <div class="wt-image">
+                            <img src="washroom.jpg" alt="Hotel Liora Clean & Hygienic Modern Washroom Layout">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ================= DINING PAGE PANEL ================= -->
+            <section id="panel-dining" class="page-panel">
+                <div class="inner-page-hero dining-hero-bg">
+                    <div class="container">
+                        <span class="section-subtitle">IN-HOUSE DINING SPREAD</span>
+                        <h1 class="inner-title">Eat Comfortably at Our Terrace Restaurant</h1>
+                        <p class="inner-desc">You do not need to step out into heavy city traffic looking for high-quality food. Our in-house restaurant offers clean, flavorful meals for the entire family.</p>
+                    </div>
+                </div>
+
+                <div class="container section-padding">
+                    <div class="dining-experience-grid">
+                        <div class="de-img-block">
+                            <img src="restaurant.jpg" alt="Hotel Liora Evening Terrace Restaurant Decor Layout">
+                        </div>
+                        <div class="de-text-block">
+                            <h2>Atmospheric Dining For Families & Teams</h2>
+                            <p>Our restaurant architecture features a beautiful rustic ceiling under-structure lined with striking hanging warm light wicker lanterns, smooth granite-top easy table sets, and sparkling background fairy lights that offer a festive but highly grounded atmosphere for meals (`restaurant.jpg`).</p>
+                            
+                            <div class="meal-breakdowns">
+                                <div class="mb-card">
+                                    <h4>Breakfast Options</h4>
+                                    <p>Freshly steamed idlis, crisp dosas, hot parathas, toast spreads, and special Gujarati tea items served hot to kickstart your corporate schedules or leisure days perfectly.</p>
+                                </div>
+                                <div class="mb-card">
+                                    <h4>Lunch & Dinner Spreads</h4>
+                                    <p>Comprehensive multi-cuisine vegetarian menu options featuring premium North Indian subzis, freshly baked rotis, local Gujarati elements, and Chinese favorite starters prepared fresh daily.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Room Service Integration Section -->
+                    <div class="room-service-highlight">
+                        <div class="rsh-content">
+                            <h3>Prompt, Hot Room Service Deliveries</h3>
+                            <p>Want to relax in your room after a demanding travel schedule? No problem. Our prompt room service infrastructure brings our popular fresh dishes straight to your room layout tray system. As shown in `2.jpg`, you can comfortably appreciate your warm afternoon coffee cups or snack dishes right on your bed extension layout spaces.</p>
+                            <div class="rsh-tagline">Stay Comfortably. Eat Comfortably. Whenever you want.</div>
+                        </div>
+                        <div class="rsh-visual">
+                            <img src="2.jpg" alt="Hotel Liora Room Service Dining Convenience">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ================= GALLERY PAGE PANEL ================= -->
+            <section id="gallery-panel-view" class="page-panel">
+                <div class="container section-padding">
+                    <div class="center-title text-center">
+                        <span class="section-subtitle">VERIFIED HOTEL PHOTOGRAPHS</span>
+                        <h1 class="inner-title">Our Visual Gallery</h1>
+                        <p class="inner-desc">Take a look at the real photos of Hotel Liora. What you see here is precisely what you will experience upon check-in.</p>
+                    </div>
+
+                    <!-- Main Core Swiper Gallery Component Container -->
+                    <div class="main-gallery-slider-wrapper">
+                        <div class="swiper mainGallerySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="1.jpg" alt="Hotel Liora Premium Bed Layout Presentation">
+                                    <div class="slide-caption">Premium King Bed Configuration & Comfortable Setup</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="2.jpg" alt="Hotel Liora Room In-room Amenities Tray Setup">
+                                    <div class="slide-caption">In-Room Tea/Coffee Setup, Smart LED TV & Desk Console</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="4.jpg" alt="Hotel Liora Bed Side Custom Furnishing Layout">
+                                    <div class="slide-caption">Clean Linen Liners & Elegant Interior Wall Styling</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="9.jpg" alt="Hotel Liora Extra Sofa Bed Family Lounge Configuration">
+                                    <div class="slide-caption">Spacious Executive Family Layout With Extended Sofas</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="restaurant.jpg" alt="Hotel Liora Rooftop Terrace Atmosphere Layout">
+                                    <div class="slide-caption">In-House Rooftop Terrace Restaurant Open-Air Structural Set</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="reception.jpg" alt="Hotel Liora Front Desk Reception Main Lobby Floor">
+                                    <div class="slide-caption">Welcoming Front Desk Reception Floor for Easy Check-In</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="washroom.jpg" alt="Hotel Liora Polished Travertine Stone Bathroom">
+                                    <div class="slide-caption">Spacious & Hygienic Western Style Bathroom Setup</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="5.jpg" alt="Hotel Liora Dry Wet Area Bathroom Configuration View">
+                                    <div class="slide-caption">Clean Stone Tiling and Premium Sanitary System Layouts</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="6.jpg" alt="Hotel Liora External Building Entrance Address Elevation">
+                                    <div class="slide-caption">Main Building Elevation View on Prime Dr. Yagnik Road</div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Layout Visual Index Map Below Slider -->
+                    <div class="gallery-photo-grid">
+                        <div class="grid-photo-item"><img src="1.jpg" alt="Liora Room Layout"></div>
+                        <div class="grid-photo-item"><img src="2.jpg" alt="Amenities Config"></div>
+                        <div class="grid-photo-item"><img src="4.jpg" alt="Bed Frame Detail"></div>
+                        <div class="grid-photo-item"><img src="9.jpg" alt="Family Lounge Setup"></div>
+                        <div class="grid-photo-item"><img src="restaurant.jpg" alt="Terrace Restaurant Spread"></div>
+                        <div class="grid-photo-item"><img src="reception.jpg" alt="Lobby Desk View"></div>
+                        <div class="grid-photo-item"><img src="washroom.jpg" alt="Washroom Layout Main"></div>
+                        <div class="grid-photo-item"><img src="6.jpg" alt="External Commercial Signage Building"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Location Information Section -->
+        <section class="section-padding location-info-section">
+            <div class="container">
+                <div class="location-grid-layout">
+                    <div class="loc-text-panel">
+                        <span class="section-subtitle">CENTRAL ACCESS ADVANTAGE</span>
+                        <h2>Right in the center of Prime Rajkot</h2>
+                        <p>Hotel Liora places you precisely at the epicenter of commercial and social movement on <strong>Dr. Yagnik Road</strong>, directly opposite the iconic Imperial Palace Hotel structure in the well-known Jagnath Plot zone.</p>
+                        
+                        <div class="distance-index">
+                            <div class="di-row">
+                                <strong>Travel Terminals</strong>
+                                <span>Rajkot Domestic Airport & Main Junction Train Station are highly accessible via direct 10-15 minute auto or taxi transits.</span>
+                            </div>
+                            <div class="di-row">
+                                <strong>Business & Shopping</strong>
+                                <span>Sitting directly above the TBZ jewelry building landmark, with immediate walking access to corporate bank hubs, electronics shops, and textile markets.</span>
+                            </div>
+                            <div class="di-row">
+                                <strong>Medical Facilities</strong>
+                                <span>Top corporate multi-specialty hospitals are located within an immediate 1.5 km radius, offering maximum safety during emergency events.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loc-map-panel">
+                        <!-- Polished Embed Map Frame linked directly to the real verified location coordinate string provided -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.679109017688!2d70.7938368!3d22.2901309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca1833aa01e9%3A0xc392fa942c7f5bf5!2sHotel%20Liora!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Section Divider Pattern Motif -->
+        <div class="divider-line-motif">
+            <span class="dot"></span>
+            <span class="line-draw"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- Master Footer Area Block -->
+        <footer class="master-footer">
+            <div class="container">
+                <div class="footer-top-grid">
+                    <div class="ft-brand">
+                        <h3>Hotel Liora</h3>
+                        <p class="tag-f">Comfortable Stay. Good Food. Prime Location.</p>
+                        <p class="addr-f">
+                            2nd Floor, Dr. Yagnik Road,<br>
+                            Opposite The Imperial Palace Hotel,<br>
+                            Jagnath Plot, Rajkot, Gujarat - 360001
+                        </p>
+                    </div>
+                    <div class="ft-contacts">
+                        <h4>Front Desk Assistance</h4>
+                        <a href="tel:8809955055" class="f-phone">8809955055</a>
+                        <p class="f-availability">Available 24 Hours / 7 Days A Week for direct booking calls</p>
+                        <div class="social-whatsapp-quick">
+                            <a href="https://wa.me/918809955055" target="_blank" class="f-wa-link">💬 Direct WhatsApp Inquiry</a>
+                        </div>
+                    </div>
+                    <div class="ft-quick-nav">
+                        <h4>Explore Options</h4>
+                        <button class="f-nav-trigger" data-target="home">Home Page</button>
+                        <button class="f-nav-trigger" data-target="rooms">Our Rooms & Rates</button>
+                        <button class="f-nav-trigger" data-target="dining">Terrace Restaurant</button>
+                        <button class="f-nav-trigger" data-target="gallery">Photo Gallery Slider</button>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom-bar">
+                    <p>&copy; 2026 Hotel Liora Rajkot. All Rights Reserved. Maintained under strict premium clean & hygienic guidelines.</p>
+                    <p class="star-disclaimer">*Prices specified are indicative starting figures subject to seasonal availability adjustments.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MOBILE PERSISTENT CALL TO ACTION DOCK STRIP BAR -->
+        <div class="mobile-persistent-dock">
+            <a href="tel:8809955055" class="dock-item dock-call">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call Hotel</span>
+            </a>
+            <a href="https://wa.me/918809955055" target="_blank" class="dock-item dock-whatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>WhatsApp Book</span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Script Resource Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
