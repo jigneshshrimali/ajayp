@@ -1,0 +1,765 @@
+/* ==========================================================================
+   PRODUCTION SYSTEM LEVEL CSS DIRECTIVES
+   ========================================================================== */
+:root {
+    --bg-base: #060606;
+    --text-primary: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.45);
+    --border-color: rgba(255, 255, 255, 0.07);
+    
+    /* Configurable Dynamic Color Matrices - Mutated over scroll steps via JS JS */
+    --chamber-accent: #ffffff;
+    --chamber-glow: rgba(255, 255, 255, 0.03);
+    
+    /* Strict Typographic Hierarchies */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Satoshi', sans-serif;
+    --font-accent: 'Space Grotesk', sans-serif;
+    
+    --cubic-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll Engine Custom Elements Layout overrides */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+html.has-scroll-dragging {
+    user-select: none;
+}
+
+/* WebKit Optimization Channels */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--chamber-accent); }
+
+/* ==========================================================================
+   LUXURY PRECISION POSITION TRACKING HUD INTERFACES
+   ========================================================================== */
+.custom-cursor {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--chamber-accent);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: width 0.4s var(--cubic-luxury), height 0.4s var(--cubic-luxury), border-color 0.6s ease;
+}
+
+.custom-cursor-dot {
+    width: 3px;
+    height: 3px;
+    background-color: var(--chamber-accent);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+    transition: background-color 0.6s ease;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.85;
+}
+
+/* Header Matrix Array */
+.vault-hud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 24px 48px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    z-index: 100;
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(6, 6, 6, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.hud-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hud-logo-text {
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.hud-geo {
+    color: var(--text-muted);
+    font-size: 9px;
+}
+
+/* Nav Menu Alignment Architecture */
+.hud-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    padding: 4px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--chamber-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link-cta {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    padding: 8px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 0px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-link-cta:hover {
+    background: var(--text-primary);
+    color: #000;
+}
+
+.hud-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.pulse-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: var(--chamber-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 14px var(--chamber-accent);
+    animation: corePulse 2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   CHAMBER STRUCTURAL DESIGN AND ENGINE CORES
+   ========================================================================== */
+#main-vault-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.vault-chamber {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 10vw;
+    box-sizing: border-box;
+}
+
+.chamber-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, var(--chamber-glow) 0%, transparent 75%);
+    z-index: -1;
+    pointer-events: none;
+    transition: background 1.2s var(--cubic-luxury);
+}
+
+.chamber-content {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* 1. Portal Entrance Subsystems */
+.entry-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    text-align: center;
+    position: relative;
+}
+
+.security-readout {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+}
+
+.accent-text {
+    color: var(--chamber-accent);
+    margin-bottom: 6px;
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 7.5vw, 105px);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.thin-serif {
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.showroom-preview-strip {
+    margin-top: 48px;
+    width: 240px;
+}
+
+.strip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.strip-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+}
+
+.strip-line {
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.scroll-prompt {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--chamber-accent), transparent);
+}
+
+/* 2. Precision Asymmetric Asymmetric Grids */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+    width: 100%;
+}
+
+.inverted-grid {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.meta-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chamber-index {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--chamber-accent);
+    margin-bottom: 24px;
+}
+
+.chamber-name {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.1;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+}
+
+.chamber-desc {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 420px;
+    margin-bottom: 40px;
+}
+
+.product-spec-callout {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--chamber-accent);
+    padding-left: 16px;
+    gap: 4px;
+}
+
+.spec-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+.spec-value {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 3. Luxury Interactive Lens Frames */
+.showcase-viewport {
+    position: relative;
+    width: 100%;
+}
+
+.interactive-frame-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #0d0d0d;
+    clip-path: polygon(6% 0%, 100% 0%, 100% 94%, 94% 100%, 0% 100%, 0% 6%);
+    transition: clip-path 0.7s var(--cubic-luxury);
+    border: 1px solid var(--border-color);
+}
+
+.interactive-frame-wrapper:hover {
+    clip-path: polygon(0% 0%, 94% 0%, 100% 6%, 100% 100%, 6% 100%, 0% 94%);
+}
+
+.showcase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(82%) contrast(104%);
+    scale: 1.01;
+    transition: transform 1.2s var(--cubic-luxury), filter 1s ease;
+}
+
+.interactive-frame-wrapper:hover .showcase-img {
+    transform: scale(1.04);
+    filter: brightness(95%) contrast(100%);
+}
+
+.frame-edge-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.85);
+}
+
+.img-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 24px;
+    font-size: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.caption-tag {
+    font-family: var(--font-accent);
+    color: var(--chamber-accent);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.img-caption p {
+    color: var(--text-muted);
+    max-width: 55%;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   SHOWROOM REALISM VALIDATION MATRICES
+   ========================================================================== */
+.showroom-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+}
+
+.showroom-header {
+    text-align: center;
+}
+
+.accent-label {
+    font-family: var(--font-accent);
+    color: var(--chamber-accent);
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.monolithic-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4.5vw, 56px);
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+/* Complex Asymmetric Spatial Image Composition Map */
+.showroom-mosaic-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 24px;
+    width: 100%;
+}
+
+.mosaic-box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: #0d0d0d;
+}
+
+.mosaic-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%) contrast(105%);
+    transition: filter 0.6s ease, transform 1s var(--cubic-luxury);
+}
+
+.mosaic-box:hover img {
+    filter: brightness(85%) contrast(100%);
+    transform: scale(1.02);
+}
+
+.main-view {
+    grid-row: span 2;
+    clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0 100%);
+}
+
+.split-top {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 93% 100%, 0 100%);
+}
+
+.split-bottom {
+    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.box-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    letter-spacing: 2px;
+    background: rgba(6,6,6,0.85);
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    color: rgba(255,255,255,0.7);
+}
+
+/* ==========================================================================
+   TERMINAL INTEGRATION ARCHITECTURES
+   ========================================================================== */
+.terminal-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.terminal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    width: 100%;
+    align-items: center;
+}
+
+.terminal-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-tag {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--chamber-accent);
+    margin-bottom: 20px;
+}
+
+.terminal-heading {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.terminal-branding-context {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.terminal-address {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.magnetic-btn-wrapper {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-primary);
+    border: 1px solid var(--chamber-accent);
+    padding: 16px 28px;
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+
+.magnetic-btn-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--chamber-accent);
+    z-index: -1;
+    transition: top 0.4s var(--cubic-luxury);
+}
+
+.magnetic-btn-wrapper:hover::before {
+    top: 0;
+}
+
+.magnetic-btn-wrapper:hover {
+    color: #060606;
+}
+
+/* Map Framework Mount Box */
+.map-container-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.map-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(6,6,6,0.5) 0%, rgba(6,6,6,0.95) 100%);
+}
+
+.map-action-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.secure-map-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    border: 1px dashed rgba(255,255,255,0.12);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+.secure-map-link:hover {
+    border-color: var(--chamber-accent);
+    background: rgba(255,255,255,0.02);
+}
+
+.link-sub {
+    font-size: 9px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.btn-scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--chamber-accent), transparent);
+    animation: coreScan 5s infinite linear;
+}
+
+/* Structural Master Studio Footer */
+.vault-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+    margin-top: 48px;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   ANIMATION KEYFRAME HARDWARE REGISTERS
+   ========================================================================== */
+@keyframes corePulse {
+    0%, 100% { opacity: 0.35; transform: scale(0.92); }
+    50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes coreScan {
+    0% { top: 0%; }
+    50% { top: 100%; }
+    100% { top: 0%; }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT MATRIX CONSTRAINTS
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .vault-hud {
+        grid-template-columns: 1fr auto;
+        padding: 16px 24px;
+    }
+    .hud-nav { display: none; } /* Drop redundant links for device optimization matrix */
+    
+    .editorial-grid, .inverted-grid, .terminal-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .vault-chamber {
+        padding: 100px 6vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .showroom-mosaic-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 200px);
+    }
+    .main-view, .split-top, .split-bottom {
+        grid-row: auto;
+        clip-path: none !important;
+    }
+    .custom-cursor, .custom-cursor-dot {
+        display: none;
+    }
+    .vault-footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
