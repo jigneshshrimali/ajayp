@@ -1,1 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandanvan Crafted — Unlimited Gujarati Thali, Rajkot</title>
+  <meta name="description" content="Nandanvan Crafted — The Never Ending Thali. Unlimited Gujarati Thali restaurant at Ayodhya Chowk, 150 Feet Ring Road, Rajkot. Fresh rotli, homely sabzi, farsan and sweets. Call 9998354054." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-main">NANDANVAN</span>
+        <span class="nav-logo-sub">CRAFTED</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#unlimited">Unlimited</a></li>
+        <li><a href="#farsan">Farsan</a></li>
+        <li><a href="#menu">Today's Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+      <a href="tel:9998354054" class="nav-cta">📞 Call Now</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="#unlimited" class="nav-mobile-link">Unlimited</a></li>
+        <li><a href="#farsan" class="nav-mobile-link">Farsan</a></li>
+        <li><a href="#menu" class="nav-mobile-link">Today's Menu</a></li>
+        <li><a href="#gallery" class="nav-mobile-link">Gallery</a></li>
+        <li><a href="#visit" class="nav-mobile-link">Visit Us</a></li>
+        <li><a href="tel:9998354054" class="btn-primary">📞 9998354054</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 01 — HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-rings">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="chapter-label">
+          <span class="chapter-line"></span>
+          <span>Chapter 01 — The First Serving</span>
+          <span class="chapter-line"></span>
+        </div>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="hero-title-main">NANDANVAN</span>
+          <span class="hero-title-sub">CRAFTED</span>
+        </h1>
+        <p class="hero-tagline" id="heroTagline">The Never Ending Thali</p>
+        <p class="hero-sub" id="heroSub">Unlimited Gujarati Thali · Fresh Every Day · Pure Vegetarian</p>
+        <div class="hero-btns" id="heroBtns">
+          <a href="#menu" class="btn-primary">Today's Thali</a>
+          <a href="#visit" class="btn-outline">Visit Us</a>
+        </div>
+        <div class="hero-chips" id="heroChips">
+          <span class="chip">Lunch 11 AM – 3 PM</span>
+          <span class="chip">Dinner 7 PM – 10:30 PM</span>
+          <span class="chip">Ayodhya Chowk, Rajkot</span>
+        </div>
+      </div>
+      <div class="hero-thali" id="heroThali">
+        <canvas id="thaliCanvas"></canvas>
+        <div class="thali-label">The Infinite Thali</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" id="scrollHint">
+      <span>Scroll to Eat</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 02 — UNLIMITED BEGINS
+  ══════════════════════════════════════ -->
+  <section class="section-unlimited" id="unlimited">
+    <div class="unlimited-bg-text">UNLIMITED</div>
+    <div class="container">
+      <div class="chapter-label centered">
+        <span class="chapter-line"></span>
+        <span>Chapter 02 — Unlimited Begins</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title reveal-text" data-split="lines">
+        You finish one bowl.<br>
+        <span class="text-turmeric">Another arrives.</span>
+      </h2>
+      <p class="section-sub reveal" style="max-width:560px;margin:0 auto 3rem;">
+        That is what Nandanvan is about. No counting. No limits. Just homely Gujarati food, served fresh, until you say stop.
+      </p>
+
+      <div class="bowls-grid" id="bowlsGrid">
+        <div class="bowl-item reveal-bowl" style="--color:#88b04b;--delay:0s"><div class="bowl-circle">🥗</div><span>Sabzi</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#d4a017;--delay:.08s"><div class="bowl-circle">🍲</div><span>Dal</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#e8c97a;--delay:.16s"><div class="bowl-circle">🍚</div><span>Rice</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#c8884a;--delay:.24s"><div class="bowl-circle">🫓</div><span>Rotli</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#e8793a;--delay:.32s"><div class="bowl-circle">🧆</div><span>Farsan</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#c8a96e;--delay:.40s"><div class="bowl-circle">🍮</div><span>Sweet</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#a8d0a8;--delay:.48s"><div class="bowl-circle">🥛</div><span>Chhas</span></div>
+        <div class="bowl-item reveal-bowl" style="--color:#d4b896;--delay:.56s"><div class="bowl-circle">🥨</div><span>Papad</span></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal"><div class="stat-number">15+</div><div class="stat-label">Items Per Thali</div></div>
+        <div class="stat-card reveal"><div class="stat-number">2×</div><div class="stat-label">Meal Times Daily</div></div>
+        <div class="stat-card reveal"><div class="stat-number">100%</div><div class="stat-label">Pure Vegetarian</div></div>
+        <div class="stat-card reveal"><div class="stat-number">∞</div><div class="stat-label">Refills, Always</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 03 — THE FARSAN COLLECTION
+  ══════════════════════════════════════ -->
+  <section class="section-dark" id="farsan">
+    <div class="container">
+      <div class="chapter-label centered light">
+        <span class="chapter-line"></span>
+        <span>Chapter 03 — The Farsan Collection</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title light reveal-text" data-split="lines">
+        Every thali starts with <span class="text-turmeric">farsan.</span>
+      </h2>
+      <p class="section-sub light reveal">
+        Freshly made, rotating daily. Gujarat's most loved snacks — served as part of your unlimited thali.
+      </p>
+      <div class="farsan-grid">
+        <div class="farsan-card reveal-card" style="--accent:#e8c97a">
+          <div class="farsan-dot" style="background:#e8c97a"></div>
+          <h3>Dhokla</h3><p>Soft steamed gram flour cake</p>
+        </div>
+        <div class="farsan-card reveal-card" style="--accent:#88b04b">
+          <div class="farsan-dot" style="background:#88b04b"></div>
+          <h3>Khandvi</h3><p>Rolled gram flour with coconut</p>
+        </div>
+        <div class="farsan-card reveal-card" style="--accent:#d4a017">
+          <div class="farsan-dot" style="background:#d4a017"></div>
+          <h3>Fafda</h3><p>Crunchy chickpea flour strips</p>
+        </div>
+        <div class="farsan-card reveal-card" style="--accent:#c8884a">
+          <div class="farsan-dot" style="background:#c8884a"></div>
+          <h3>Gathiya</h3><p>Crispy chickpea snack</p>
+        </div>
+        <div class="farsan-card reveal-card" style="--accent:#e8793a">
+          <div class="farsan-dot" style="background:#e8793a"></div>
+          <h3>Sev</h3><p>Fine fried chickpea noodles</p>
+        </div>
+        <div class="farsan-card reveal-card" style="--accent:#88b04b">
+          <div class="farsan-dot" style="background:#88b04b"></div>
+          <h3>Patra</h3><p>Colocasia leaves with spiced paste</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 04 — ROTLI NEVER STOPS
+  ══════════════════════════════════════ -->
+  <section class="section-rotli" id="rotli">
+    <div class="container">
+      <div class="rotli-inner">
+        <div class="rotli-visual" id="rotliVisual">
+          <div class="rotli-ring rotli-ring-1"></div>
+          <div class="rotli-ring rotli-ring-2"></div>
+          <div class="rotli-ring rotli-ring-3"></div>
+          <div class="rotli-center" id="rotliCenter">🫓</div>
+          <div class="rotli-orbit" id="rotliOrbit">
+            <div class="rotli-satellite" style="--angle:0deg">🫓</div>
+            <div class="rotli-satellite" style="--angle:90deg">🫓</div>
+            <div class="rotli-satellite" style="--angle:180deg">🫓</div>
+            <div class="rotli-satellite" style="--angle:270deg">🫓</div>
+          </div>
+        </div>
+        <div class="rotli-content">
+          <div class="chapter-label">
+            <span class="chapter-line"></span>
+            <span>Chapter 04 — Rotli Never Stops</span>
+            <span class="chapter-line"></span>
+          </div>
+          <h2 class="section-title reveal-text" data-split="lines">
+            Fresh Rotli.<br>
+            <span class="text-turmeric">Hot off the tawa.</span><br>
+            As many as you want.
+          </h2>
+          <div class="bread-grid">
+            <div class="bread-card reveal"><strong>Rotli</strong><span>Thin wheat, ghee-kissed</span></div>
+            <div class="bread-card reveal"><strong>Puri</strong><span>Soft fried bread</span></div>
+            <div class="bread-card reveal"><strong>Thepla</strong><span>Methi-spiced flatbread</span></div>
+            <div class="bread-card reveal"><strong>Bajra Rotla</strong><span>Millet bread with butter</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 05 — TODAY'S THALI MENU
+  ══════════════════════════════════════ -->
+  <section class="section-menu" id="menu">
+    <div class="container">
+      <div class="chapter-label centered">
+        <span class="chapter-line"></span>
+        <span>Chapter 05 — Today's Special Menu</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title reveal-text" data-split="lines">Today's Thali</h2>
+      <div class="menu-date-badge" id="menuDate"></div>
+      <p class="section-sub reveal">All items served unlimited. One price. No limits.</p>
+
+      <div class="menu-special reveal" id="menuSpecial">
+        <span class="star">⭐</span>
+        <span id="menuSpecialText">Today's Special: Aam Ras with Puri</span>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Injected by JS -->
+      </div>
+
+      <p class="menu-note reveal">
+        Menu changes daily. Call <a href="tel:9998354054">9998354054</a> to confirm today's menu before visiting.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 06 — SWEET ENDINGS
+  ══════════════════════════════════════ -->
+  <section class="section-sweets" id="sweets">
+    <div class="container">
+      <div class="chapter-label centered">
+        <span class="chapter-line"></span>
+        <span>Chapter 06 — Sweet Endings</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title reveal-text" data-split="lines">
+        No Gujarati meal is complete<br>
+        without <span class="text-gold">something sweet.</span>
+      </h2>
+      <p class="section-sub reveal">Rotating daily sweets — always fresh, always generous.</p>
+      <div class="sweets-grid">
+        <div class="sweet-card reveal-card" style="--sc:#e8c97a"><span>🥛</span><strong>Basundi</strong></div>
+        <div class="sweet-card reveal-card" style="--sc:#c8884a"><span>🟤</span><strong>Gulab Jamun</strong></div>
+        <div class="sweet-card reveal-card" style="--sc:#d4a017"><span>🟡</span><strong>Mohanthal</strong></div>
+        <div class="sweet-card reveal-card" style="--sc:#e8793a"><span>🟠</span><strong>Sukhdi</strong></div>
+        <div class="sweet-card reveal-card" style="--sc:#a05a2c"><span>🍫</span><strong>Halwa</strong></div>
+        <div class="sweet-card reveal-card" style="--sc:#f0a0b8"><span>🍮</span><strong>Shrikhand</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 07 — FAMILY DINING MOMENTS
+  ══════════════════════════════════════ -->
+  <section class="section-dark" id="family">
+    <div class="container">
+      <div class="chapter-label centered light">
+        <span class="chapter-line"></span>
+        <span>Chapter 07 — Family Dining Moments</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title light reveal-text" data-split="lines">
+        Built for families.<br>
+        <span class="text-saffron">Made with love.</span>
+      </h2>
+      <div class="family-grid">
+        <div class="family-card reveal"><span>👨‍👩‍👧‍👦</span><div><strong>Family Tables</strong><p>Spacious seating for families of all sizes</p></div></div>
+        <div class="family-card reveal"><span>🍽️</span><div><strong>Clean &amp; Hygienic</strong><p>Restaurant-quality cleanliness every day</p></div></div>
+        <div class="family-card reveal"><span>🌿</span><div><strong>No Onion No Garlic</strong><p>Jain-friendly options available on request</p></div></div>
+        <div class="family-card reveal"><span>💰</span><div><strong>Affordable Thali</strong><p>Full unlimited thali at a fair price</p></div></div>
+        <div class="family-card reveal"><span>⚡</span><div><strong>Quick Service</strong><p>Fast refills, no waiting at your table</p></div></div>
+        <div class="family-card reveal"><span>🅿️</span><div><strong>Easy Parking</strong><p>150 Feet Ring Road — easy to reach</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GALLERY
+  ══════════════════════════════════════ -->
+  <section class="section-gallery" id="gallery">
+    <div class="container">
+      <div class="chapter-label centered">
+        <span class="chapter-line"></span>
+        <span>Experience Nandanvan</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title reveal-text" data-split="lines">
+        A feast for the eyes<br>
+        <span class="text-gold">before the plate.</span>
+      </h2>
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="thali">Thali</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="dining">Dining</button>
+        <button class="filter-btn" data-filter="family">Family</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-bg" id="lightboxBg"></div>
+      <div class="lightbox-card" id="lightboxCard">
+        <span class="lightbox-emoji" id="lightboxEmoji"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+        <button class="btn-primary" id="lightboxClose">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CHAPTER 08 — VISIT NANDANVAN
+  ══════════════════════════════════════ -->
+  <section class="section-dark section-visit" id="visit">
+    <div class="container">
+      <div class="chapter-label centered light">
+        <span class="chapter-line"></span>
+        <span>Chapter 08 — Visit Nandanvan</span>
+        <span class="chapter-line"></span>
+      </div>
+      <h2 class="section-title light reveal-text" data-split="lines">
+        Come hungry.<br>
+        <span class="text-turmeric">Leave satisfied.</span>
+      </h2>
+      <div class="visit-grid">
+        <div class="visit-info">
+          <div class="info-card reveal">
+            <div class="info-icon" style="background:var(--turmeric)">📍</div>
+            <div>
+              <strong>Our Location</strong>
+              <p>Ayodhya Chowk, 150 Feet Ring Road<br>Rajkot, Gujarat — India</p>
+              <a href="https://share.google/cggW95WHcFHsE2P9W" target="_blank" rel="noopener" class="map-link">Open in Google Maps →</a>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon" style="background:var(--ghee-gold)">📞</div>
+            <div>
+              <strong>Call Us</strong>
+              <a href="tel:9998354054" class="phone-link">9998354054</a>
+              <p>For reservations and menu inquiries</p>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon" style="background:var(--terracotta)">🕐</div>
+            <div class="timings-wrap">
+              <strong>Meal Timings</strong>
+              <div class="timing-row"><span>☀️ Lunch</span><span>11:00 AM – 3:00 PM</span></div>
+              <div class="timing-row"><span>🌙 Dinner</span><span>7:00 PM – 10:30 PM</span></div>
+              <p class="timing-note">Open all 7 days · Public holidays included</p>
+            </div>
+          </div>
+          <a href="tel:9998354054" class="btn-reserve reveal">📞 Reserve Your Thali Now</a>
+        </div>
+        <div class="visit-map reveal">
+          <iframe
+            title="Nandanvan Crafted"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4!2d70.8022!3d22.3039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzE0LjAiTiA3MMKwNDgnMDguMCJF!5e0!3m2!1sen!2sin!4v1"
+            width="100%" height="100%" style="border:0;min-height:420px;filter:saturate(0.85) brightness(0.88)"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-name">NANDANVAN CRAFTED</div>
+          <div class="footer-tagline">THE NEVER ENDING THALI</div>
+        </div>
+        <nav class="footer-links">
+          <a href="#unlimited">Unlimited</a>
+          <a href="#menu">Today's Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#visit">Visit Us</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="tel:9998354054" class="footer-phone">9998354054</a>
+          <p>Ayodhya Chowk, Rajkot</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span id="footerYear"></span>
+        <span>Pure Vegetarian · Unlimited Gujarati Thali · Rajkot</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
