@@ -1,0 +1,64 @@
+/* Core Structural Stability Adjustments */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #FBFBFA;
+}
+
+/* Page Navigation Content Pane Matrix */
+.view-pane {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    z-index: 10;
+}
+
+.view-pane.active-pane {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Prevent layout breaking during image parallax load sequences */
+.img-reveal-container {
+    overflow: hidden;
+    will-change: transform;
+}
+
+.hero-image-container {
+    will-change: transform;
+}
+
+/* Custom Swiper Component Interface Harmonization */
+.swiper-pagination-bullet-active {
+    background: #C5BBA4 !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: #F5F3EE;
+}
+
+/* Fixed Navigation Under-shading adaptation when scrolling */
+.nav-scrolled {
+    background-color: rgba(245, 243, 238, 0.9);
+    backdrop-filter: blur(12px);
+    border-b: 1px solid rgba(234, 230, 223, 0.8);
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+}
+
+/* Mobile View Layout Safeguards */
+@media (max-width: 768px) {
+    .spatial-swiper {
+        height: 280px !important;
+    }
+}
