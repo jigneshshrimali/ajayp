@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Jewellers | The Vault of Rarities</title>
+    <meta name="description" content="Discover the exquisite craftsmanship of JP Jewellers, Rajkot. Explore custom Diamond, Gold, Gemstone, and Heritage Wedding jewellery inside our cinematic digital vault.">
+    
+    <!-- Modern Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Locomotive Scroll Style for Kinetic Linear Inertia -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Custom Micro-Interaction Luxury Tracking Elements -->
+    <div class="custom-cursor" id="luxury-cursor"></div>
+    <div class="custom-cursor-dot" id="luxury-cursor-dot"></div>
+
+    <!-- Fixed Spatial Background Layer (Three.js Floating Element) -->
+    <div id="canvas-container"></div>
+
+    <!-- Production Ready Navigation HUD -->
+    <header class="vault-hud">
+        <div class="hud-brand">
+            <span class="hud-logo-text">JP JEWELLERS</span>
+            <span class="hud-geo">RAJKOT // ESTD. 1994</span>
+        </div>
+        <nav class="hud-nav">
+            <a href="#vault-entrance" class="nav-link active" data-scroll-to>VAULT</a>
+            <a href="#diamond-chamber" class="nav-link" data-scroll-to>DIAMOND</a>
+            <a href="#ruby-chamber" class="nav-link" data-scroll-to>WEDDING</a>
+            <a href="#emerald-chamber" class="nav-link" data-scroll-to>GEMSTONES</a>
+            <a href="#gold-chamber" class="nav-link" data-scroll-to>GOLD</a>
+            <a href="#signature-chamber" class="nav-link" data-scroll-to>SIGNATURE</a>
+            <a href="#visit-terminal" class="nav-link-cta" data-scroll-to>BOOK SALON</a>
+        </nav>
+        <div class="hud-status">
+            <div class="pulse-indicator"></div>
+            <span id="active-chamber-hud">VAULT SECURE</span>
+        </div>
+    </header>
+
+    <!-- Unified Experience Main Scroll Field -->
+    <main id="main-vault-container" data-scroll-container>
+
+        <!-- Section 1: Cinematic Entry Gate -->
+        <section id="vault-entrance" class="vault-chamber active-chamber" data-chamber="security" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content entry-layout">
+                <div class="security-readout" data-scroll data-scroll-speed="-1">
+                </div>
+                <h1 class="main-title" data-scroll data-scroll-speed="2.5">
+                    The ROYAL <br><span class="thin-serif">COLLECTION</span>
+                </h1>
+                <div class="showroom-preview-strip" data-scroll data-scroll-speed="1">
+                    <div class="strip-item">
+                        <div class="strip-line"></div>
+                    </div>
+                </div>
+                <div class="scroll-prompt" data-scroll data-scroll-speed="0.5">
+                    <span class="prompt-text">SCROLL TO UNLOCK CHRONOLOGY</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Diamond Chamber -->
+        <section id="diamond-chamber" class="vault-chamber" data-chamber="diamond" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content editorial-grid">
+                <div class="meta-panel" data-scroll data-scroll-speed="0.5">
+                    <h2 class="chamber-name">DIAMOND<br>GALLERY</h2>
+                    <p class="chamber-desc">Unmatched brilliance sculpted through crystalline alignments. Exquisite high-grade diamonds calibrated precisely for high-contrast light dissipation under Indian architectural illumination.</p>
+                    <div class="product-spec-callout">
+                        <span class="spec-value">NATURAL CERTIFIED DIAMONDS</span>
+                    </div>
+                </div>
+                <div class="showcase-viewport" data-scroll data-scroll-speed="1.2">
+                    <div class="interactive-frame-wrapper">
+                        <img src="jewllery10.png" alt="Exquisite Diamond and Pearl Long Haram Setting" class="showcase-img" onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80'">
+                        <div class="frame-edge-glare"></div>
+                    </div>
+                    <div class="img-caption">
+                        <span class="caption-tag">DISTINCT STYLE WITH MODERN TASTE</span>
+                        <p>Multi-tiered fine beaded haram accented with brilliant diamond elements and pristine pearls.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Ruby & Wedding Heritage Chamber -->
+        <section id="ruby-chamber" class="vault-chamber" data-chamber="ruby" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content editorial-grid inverted-grid">
+                <div class="showcase-viewport" data-scroll data-scroll-speed="1">
+                    <div class="interactive-frame-wrapper">
+                        <img src="jewllery8.png" alt="Ek Khwaab Sa Traditional Heritage Red Gem Set" class="showcase-img" onerror="this.src='https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80'">
+                        <div class="frame-edge-glare"></div>
+                    </div>
+                    <div class="img-caption">
+                        <span class="caption-tag">COLLECTION: EK KHWAAB SA</span>
+                        <p>High-end antique finish structural matte gold jewelry accented with raw rubies and fine uncut gems.</p>
+                    </div>
+                </div>
+                <div class="meta-panel" data-scroll data-scroll-speed="0.5">
+                    <h2 class="chamber-name">THE RAJWADI<br>HERITAGE</h2>
+                    <p class="chamber-desc">Bridging time across generations. These heavy wedding sets evoke the deep royal visual histories of Saurashtra, matching deep matte golds with pigeon-blood rubies.</p>
+                    <div class="product-spec-callout">
+                        <span class="spec-value">TIMELESS HEIRLOOMS FOR GENERATIONS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Emerald & Gemstone Field -->
+        <section id="emerald-chamber" class="vault-chamber" data-chamber="emerald" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content editorial-grid">
+                <div class="meta-panel" data-scroll data-scroll-speed="0.5">
+                    <h2 class="chamber-name">MANEK<br>GALLERY</h2>
+                    <p class="chamber-desc">Hand-selected structural beryls featuring vibrant depth density. Meticulously balanced asymmetry tailored specifically for modern discerning profiles looking for timeless elegance.</p>
+                </div>
+                <div class="showcase-viewport" data-scroll data-scroll-speed="1.4">
+                    <div class="interactive-frame-wrapper">
+                        <img src="jewllery9.png" alt="Timeless Elegant and Flawless Details Choker" class="showcase-img" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80'">
+                        <div class="frame-edge-glare"></div>
+                    </div>
+                    <div class="img-caption">
+                        <span class="caption-tag">TIMELESS, ELEGANT & FLAWLESS DETAILS</span>
+                        <p>Contemporary torque collar necklace featuring geometric emerald statement pendants and hanging pearls.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Signature Bangle & Geometry Field -->
+        <section id="signature-chamber" class="vault-chamber" data-chamber="signature" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content editorial-grid inverted-grid">
+                <div class="showcase-viewport" data-scroll data-scroll-speed="1.2">
+                    <div class="interactive-frame-wrapper">
+                        <img src="bangles1.jpg" alt="A Story of Countless Chapters Fine Kadas" class="showcase-img" onerror="this.src='https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80'">
+                        <div class="frame-edge-glare"></div>
+                    </div>
+                    <div class="img-caption">
+                        <span class="caption-tag">A STORY OF COUNTLESS CHAPTERS</span>
+                        <p>Intricately structured architectural gold bangles inset with alternating square-cut emerald arrays.</p>
+                    </div>
+                </div>
+                <div class="meta-panel" data-scroll data-scroll-speed="0.5">
+                    <h2 class="chamber-name">MEENAKARI<br>ARTISTRY</h2>
+                    <p class="chamber-desc">Our absolute pinnacle collection. Heavyweight geometric frameworks that house alternating deep velvet emerald fields within pristine interlocking gold matrices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Golden Treasury Room -->
+        <section id="gold-chamber" class="vault-chamber" data-chamber="gold" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content editorial-grid">
+                <div class="meta-panel" data-scroll data-scroll-speed="0.5">
+                    <h2 class="chamber-name">THE NAKSHI<br>GOLD ART</h2>
+                    <p class="chamber-desc">Pure structural gold arrays forged using exceptional hand-guided craftsmanship. Geometric textured panels designed to reflect ambient lighting arrays symmetrically.</p>
+                </div>
+                <div class="showcase-viewport" data-scroll data-scroll-speed="1">
+                    <div class="interactive-frame-wrapper">
+                        <img src="jewllery9.png" alt="Truest Essence of Unmatched Elegance Set" class="showcase-img" onerror="this.src='https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80'">
+                        <div class="frame-edge-glare"></div>
+                    </div>
+                    <div class="img-caption">
+                        <span class="caption-tag">TRUEST ESSENCE OF UNMATCHED ELEGANCE</span>
+                        <p>Modern architectural step-cut patterned statement collar with square emerald centerpieces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: The Physical Space Realism Validation Matrix -->
+        <section id="showroom-experience" class="vault-chamber" data-chamber="security" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content showroom-layout">
+                <div class="showroom-header">
+                    <span class="accent-label">EXPERIENCE TRADITION IN PERSON</span>
+                    <h2 class="monolithic-heading">THE PALACE ROAD SHOWROOM</h2>
+                </div>
+                
+                <div class="showroom-mosaic-grid">
+                    <div class="mosaic-box main-view" data-scroll data-scroll-speed="0.5">
+                        <img src="interior1.jpg" alt="JP Jewellers Main Hall Display Cabinets" onerror="this.src='https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=80'">
+                        <span class="box-tag">ARCHITECTURAL PANORAMA</span>
+                    </div>
+                    <div class="mosaic-box split-top" data-scroll data-scroll-speed="1.2">
+                        <img src="interior2.jpg" alt="Exclusive Bridal Diamond Consultation Counter" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80'">
+                        <span class="box-tag">PRIVATE DIAMOND SALON</span>
+                    </div>
+                    <div class="mosaic-box split-bottom" data-scroll data-scroll-speed="0.8">
+                        <img src="interior4.jpg" alt="Heritage Gold Vault Displays" onerror="this.src='https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80'">
+                        <span class="box-tag">HERITAGE GOLD WALL GALLERY</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Spatial Anchoring & Verification Terminal -->
+        <section id="visit-terminal" class="vault-chamber" data-chamber="security" data-scroll-section>
+            <div class="chamber-backdrop"></div>
+            <div class="chamber-content terminal-layout">
+                <div class="terminal-grid" data-scroll data-scroll-speed="0.5">
+                    
+                    <div class="terminal-block info-block">
+                        <span class="block-tag">LOCATION VERIFICATION GATEWAY</span>
+                        <h2 class="terminal-heading">JP JEWELLERS</h2>
+                        <p class="terminal-branding-context">The premier high luxury jewel house of Rajkot. Experience historical curation paired directly with cutting edge precision styling.</p>
+                        <address class="terminal-address">
+                            Near Ashapura Temple,<br>
+                            Palace Road, Prahlad Plot,<br>
+                            Rajkot, Gujarat 360001
+                        </address>
+                        <div class="comms-line">
+                            <a href="tel:9328591000" class="magnetic-btn-wrapper">
+                                <span class="magnetic-btn-text">SECURE COMMS LINK: +91 93285 91000</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="terminal-block interactive-map-block">
+                        <div class="map-container-wrapper">
+                            <img src="interior1.jpg" class="map-bg-image" alt="Showroom Environment Verification Visual" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80'">
+                            <div class="map-scrim"></div>
+                            <div class="map-action-overlay">
+                                <a href="https://maps.app.goo.gl/nzwHMXN61nmJMk566" target="_blank" rel="noopener noreferrer" class="secure-map-link">
+                                    <span class="btn-scan-line"></span>
+                                    <span class="link-label">ENGAGE GOOGLE MAPS SATELLITE ENGINE</span>
+                                    <span class="link-sub">// PALACE ROAD ANCHOR PT</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <footer class="vault-footer">
+                    <p>© 2026 JP JEWELLERS. DIRECT TELEMETRY LUXURY PORTAL. PRODUCTION STABLE VERSION V2.0.</p>
+                    <p>DESIGN SYSTEM IMPLEMENTED VIA INTERACTION ARCHITECTS MATRIX.</p>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Framework Implementations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
