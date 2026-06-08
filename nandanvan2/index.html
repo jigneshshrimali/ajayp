@@ -1,1 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandanvan Crafted — Unlimited Gujarati Thali, Rajkot</title>
+  <meta name="description" content="Nandanvan Crafted — The Never Ending Thali. Unlimited Gujarati Thali restaurant at Ayodhya Chowk, 150 Feet Ring Road, Rajkot." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════ NAVBAR ══════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="nandanvan.png" alt="Nandanvan" class="nav-logo-img" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-main">NANDANVAN</span>
+          <span class="nav-logo-sub">CRAFTED · Gujarati Cuisine</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#thali">The Thali</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+      <a href="tel:9998354054" class="nav-cta">Call 9998354054</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="#story"   class="nav-mobile-link">Our Story</a></li>
+        <li><a href="#thali"   class="nav-mobile-link">The Thali</a></li>
+        <li><a href="#menu"    class="nav-mobile-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-mobile-link">Gallery</a></li>
+        <li><a href="#visit"   class="nav-mobile-link">Visit Us</a></li>
+        <li><a href="tel:9998354054" class="btn-primary">Call 9998354054</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="fulldish.jpg" alt="Nandanvan Thali" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Unlimited · Pure Vegetarian · Rajkot</div>
+      <h1 class="hero-title">
+        <span class="hero-title-hindi">નંદનવન</span>
+        <span class="hero-title-en">NANDANVAN CRAFTED</span>
+      </h1>
+      <p class="hero-tagline">The Never Ending Thali</p>
+      <p class="hero-sub">Unlimited Gujarati Thali, served fresh every day. Eat until your heart — and stomach — are full.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Today's Thali</a>
+        <a href="#visit" class="btn-ghost">Visit Us →</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">☀️ Lunch 11 AM – 3 PM</span>
+        <span class="chip">🌙 Dinner 7 PM – 10:30 PM</span>
+        <span class="chip">📍 Ayodhya Chowk, Rajkot</span>
+      </div>
+    </div>
+    <div class="hero-photo-stack">
+      <img src="fulldish2.jpg" alt="Full Thali" class="hero-photo hero-photo-1" />
+      <img src="7.jpg" alt="Thali spread" class="hero-photo hero-photo-2" />
+    </div>
+    <a href="#story" class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ══════ RESTAURANT EXTERIOR STRIP ══════ -->
+  <div class="exterior-strip">
+    <img src="nandanvan.png" alt="Nandanvan Crafted Restaurant" />
+    <div class="exterior-caption">
+      <strong>Nandanvan Crafted</strong>
+      <span>Ayodhya Chowk · 150 Feet Ring Road · Rajkot</span>
+    </div>
+  </div>
+
+  <!-- ══════ STORY ══════ -->
+  <section class="section-story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-heading">Born from the kitchens of Gujarat</h2>
+          <p>Nandanvan Crafted is a celebration of authentic Gujarati home cooking — the kind your grandmother made. Every thali is a complete meal: sabzi, dal, rotli, rice, farsan, sweets, and more.</p>
+          <p>The rule is simple: <strong>you never run out.</strong> Refills keep coming until you say stop. That is the Nandanvan promise.</p>
+          <div class="story-stats">
+            <div class="story-stat"><div class="stat-n">15+</div><div class="stat-l">Items per Thali</div></div>
+            <div class="story-stat"><div class="stat-n">∞</div><div class="stat-l">Refills, always</div></div>
+            <div class="story-stat"><div class="stat-n">100%</div><div class="stat-l">Pure Vegetarian</div></div>
+          </div>
+        </div>
+        <div class="story-photos">
+          <img src="fulldish.jpg" alt="Golden thali" class="story-photo-main" />
+          <img src="pan.png" alt="Paan ending" class="story-photo-accent" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ THE THALI — FULL BLEED ══════ -->
+  <section class="section-thali-hero" id="thali">
+    <div class="thali-hero-img">
+      <img src="fulldish2.jpg" alt="Complete Gujarati Thali" />
+      <div class="thali-hero-overlay">
+        <div class="thali-hero-text">
+          <div class="section-label light">The Infinite Thali</div>
+          <h2>Everything on one plate.<br><em>Served until you say stop.</em></h2>
+          <a href="tel:9998354054" class="btn-primary">Reserve Your Table</a>
+        </div>
+      </div>
+    </div>
+    <!-- Thali item callouts -->
+    <div class="container">
+      <div class="thali-items-grid">
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#c4850a"></div>
+          <strong>Sabzi</strong><span>2–3 seasonal vegetable dishes</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#8a5a2a"></div>
+          <strong>Dal</strong><span>Toor dal, dhokli, or chaas</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#5a8a3a"></div>
+          <strong>Rotli</strong><span>Hot off the tawa, unlimited</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#b8860b"></div>
+          <strong>Rice & Khichdi</strong><span>Steamed or tempered</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#e8793a"></div>
+          <strong>Farsan</strong><span>Freshly made daily</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#f0a0b8"></div>
+          <strong>Sweets</strong><span>Rotating daily dessert</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#9a4a28"></div>
+          <strong>Kathol</strong><span>Protein-rich lentil preparation</span>
+        </div>
+        <div class="thali-item">
+          <div class="thali-item-dot" style="background:#4a7a9a"></div>
+          <strong>Papad & Pickle</strong><span>Classic accompaniments</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ PHOTO FEATURE STRIPS ══════ -->
+  <section class="section-strips">
+    <div class="strip strip-left">
+      <img src="12.jpg" alt="Thali with thepla" />
+      <div class="strip-text">
+        <div class="section-label">Rotli Never Stops</div>
+        <h3>Fresh Rotli, Puri & Thepla — hot off the tawa, as many as you want.</h3>
+        <p>Our team refills your bread the moment you finish. No asking, no waiting.</p>
+      </div>
+    </div>
+    <div class="strip strip-right">
+      <div class="strip-text">
+        <div class="section-label">Sweet Endings</div>
+        <h3>Every meal ends with something sweet — it is the Gujarati way.</h3>
+        <p>From basundi to mohanthal, our daily desserts rotate so every visit feels new.</p>
+      </div>
+      <img src="pan.png" alt="Paan sweet ending" />
+    </div>
+  </section>
+
+  <!-- ══════ TODAY'S MENU ══════ -->
+  <section class="section-menu" id="menu">
+    <div class="container">
+      <div class="section-label centered">Today's Thali</div>
+      <h2 class="section-heading centered">What's on your plate today</h2>
+      <div class="menu-date-badge" id="menuDate"></div>
+      <div class="menu-special" id="menuSpecial">
+        <span class="star">⭐</span>
+        <span>Today's Special: Aam Ras with Puri</span>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="menu-note">Menu changes daily. Call <a href="tel:9998354054">9998354054</a> to confirm before visiting.</p>
+    </div>
+  </section>
+
+  <!-- ══════ GALLERY ══════ -->
+  <section class="section-gallery" id="gallery">
+    <div class="container">
+      <div class="section-label centered">Gallery</div>
+      <h2 class="section-heading centered">A feast for the eyes</h2>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="thali">Thali</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-bg" id="lightboxBg"></div>
+      <div class="lightbox-card">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img id="lightboxImg" src="" alt="" />
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ WHY NANDANVAN ══════ -->
+  <section class="section-why">
+    <div class="container">
+      <div class="section-label centered">Why Nandanvan</div>
+      <h2 class="section-heading centered">Built for families. Made with love.</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌿</div>
+          <strong>No Onion · No Garlic</strong>
+          <p>Jain-friendly options available on request</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">♻️</div>
+          <strong>Unlimited Refills</strong>
+          <p>Every item is refilled without asking</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏠</div>
+          <strong>Homestyle Cooking</strong>
+          <p>Recipes from traditional Gujarati kitchens</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <strong>Honest Pricing</strong>
+          <p>Full unlimited thali at one fair price</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <strong>Quick Refills</strong>
+          <p>Fast service, no waiting at your table</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🅿️</div>
+          <strong>Easy Parking</strong>
+          <p>150 Feet Ring Road — simple to reach</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ VISIT ══════ -->
+  <section class="section-visit" id="visit">
+    <div class="container">
+      <div class="section-label centered light">Visit Nandanvan</div>
+      <h2 class="section-heading centered light">Come hungry. Leave satisfied.</h2>
+      <div class="visit-grid">
+        <div class="visit-info">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <p>Ayodhya Chowk, 150 Feet Ring Road<br>Rajkot, Gujarat, India</p>
+              <a href="https://share.google/cggW95WHcFHsE2P9W" target="_blank" rel="noopener" class="map-link">Open in Google Maps →</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div>
+              <strong>Reservations</strong>
+              <a href="tel:9998354054" class="phone-link">9998354054</a>
+              <p>Call for table bookings & menu info</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <div>
+              <strong>Timings</strong>
+              <div class="timing-row"><span>Lunch</span><span>11:00 AM – 3:00 PM</span></div>
+              <div class="timing-row"><span>Dinner</span><span>7:00 PM – 10:30 PM</span></div>
+              <p class="timing-note">Open all 7 days · Holidays included</p>
+            </div>
+          </div>
+          <a href="tel:9998354054" class="btn-reserve">Reserve Your Thali Now</a>
+        </div>
+        <div class="visit-map">
+          <iframe
+            title="Nandanvan Crafted Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4!2d70.8022!3d22.3039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzE0LjAiTiA3MMKwNDgnMDguMCJF!5e0!3m2!1sen!2sin!4v1"
+            width="100%" height="100%" style="border:0;filter:saturate(0.9) brightness(0.9)"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-name">NANDANVAN CRAFTED</div>
+          <div class="footer-tagline">THE NEVER ENDING THALI</div>
+        </div>
+        <nav class="footer-links">
+          <a href="#story">Our Story</a>
+          <a href="#thali">The Thali</a>
+          <a href="#menu">Today's Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#visit">Visit Us</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="tel:9998354054" class="footer-phone">9998354054</a>
+          <p>Ayodhya Chowk, Rajkot</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span id="footerYear"></span>
+        <span>Pure Vegetarian · Unlimited Gujarati Thali · Rajkot</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
