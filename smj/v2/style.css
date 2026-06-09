@@ -1,0 +1,563 @@
+/* ==========================================================================
+   THE SHREE MANGAL JEWELLERS (SMJ) DESIGN SYSTEM SPECIFICATION
+   ========================================================================== */
+:root {
+    --canvas-matte-black: #020306;
+    --canvas-deep-void: #000000;
+    --surface-glass-card: rgba(14, 11, 15, 0.78);
+    --surface-solid-card: #0E0F14;
+    
+    /* Vibrant Velvet & Gold Palette */
+    --jewel-gold: #F3CD5F;
+    --jewel-gold-deep: #D4AF37;
+    --jewel-ruby: #FF2E63;
+    --jewel-ruby-glow: rgba(255, 46, 99, 0.25);
+    
+    /* Typography Protocols */
+    --font-serif-lux: 'Cinzel', serif;
+    --font-sans-clean: 'Plus Jakarta Sans', sans-serif;
+    
+    --timing-bezier: cubic-bezier(0.16, 1, 0.3, 1);
+    --glow-gold: 0 0 30px rgba(243, 205, 95, 0.18);
+    --glow-ruby: 0 0 30px rgba(255, 46, 99, 0.28);
+}
+
+/* ==========================================================================
+   RESET & FOUNDATIONAL BASELINE GRID
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--canvas-matte-black);
+    color: #F8FAFC;
+    font-family: var(--font-sans-clean);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Fixed Backplane Waves Mesh Layer Element */
+#vanta-ambient-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Strict Defensive Edge-Safety Margins System */
+.layout-section-wrapper {
+    padding: clamp(65px, 9vw, 130px) max(24px, 5vw);
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Thematic Color Bridge Tokens */
+.text-gold { color: var(--jewel-gold); }
+.text-ruby { color: var(--jewel-ruby); }
+.background-ruby { background-color: var(--jewel-ruby); }
+.border-gold { border: 1px solid var(--jewel-gold) !important; }
+.border-ruby { border: 1px solid var(--jewel-ruby) !important; }
+
+/* ==========================================================================
+   HIGH-FIDELITY CORE NAVIGATION HEADER
+   ========================================================================== */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(2, 3, 6, 0.94);
+    border-bottom: 1px solid rgba(243, 205, 95, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px max(24px, 4vw);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--jewel-gold);
+}
+
+.brand-text-block .gujarati-brand {
+    font-family: var(--font-serif-lux);
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: #FFF;
+    display: block;
+}
+
+.brand-text-block .english-brand {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--jewel-gold);
+    letter-spacing: 3px;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94A3B8;
+    position: relative;
+    padding: 6px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--jewel-ruby);
+    transition: width 0.35s var(--timing-bezier);
+}
+
+.nav-link:hover::after { width: 100%; }
+.nav-link:hover { color: #FFF; }
+
+.nav-link-btn {
+    background-color: transparent;
+    border: 1px solid var(--jewel-gold);
+    color: var(--jewel-gold);
+    padding: 10px 22px;
+    border-radius: 2px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.nav-link-btn:hover {
+    background-color: var(--jewel-gold);
+    color: var(--canvas-deep-void);
+    box-shadow: var(--glow-gold);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 26px;
+    height: 18px;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 1002;
+}
+
+.mobile-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--jewel-gold);
+    border-radius: 2px;
+    transition: transform 0.3s var(--timing-bezier), opacity 0.3s ease;
+}
+
+/* ==========================================================================
+   THE HERO SHOWCASE STAGE
+   ========================================================================== */
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.badge-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 46, 99, 0.05);
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.pulse-gem {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: gemPulse 1.5s infinite alternate;
+}
+
+@keyframes gemPulse {
+    0% { transform: scale(0.8); opacity: 0.4; }
+    100% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 8px var(--jewel-ruby); }
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif-lux);
+    font-size: clamp(2.3rem, 5.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: #94A3B8;
+    margin-bottom: 38px;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.btn-whatsapp-action {
+    background-color: #25D366;
+    color: #FFF;
+    padding: 14px 28px;
+    border-radius: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-whatsapp-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-discover {
+    background: transparent;
+    padding: 14px 28px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: var(--jewel-gold);
+    color: var(--canvas-deep-void) !important;
+    box-shadow: var(--glow-gold);
+}
+
+.neon-glow-frame {
+    padding: 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.neon-glow-frame.frame-ruby {
+    background: linear-gradient(135deg, var(--jewel-ruby), transparent);
+    box-shadow: var(--glow-ruby);
+}
+
+.hero-store-img {
+    width: 100%;
+    height: clamp(300px, 45vh, 440px);
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.floating-cyber-chip {
+    position: absolute;
+    bottom: -15px;
+    left: 24px;
+    background-color: #0E1420;
+    border-radius: 2px;
+    padding: 10px 22px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.floating-cyber-chip.chip-gold { border: 1px solid var(--jewel-gold); color: var(--jewel-gold); }
+.lux-divider-line { max-width: 1200px; height: 1px; background: linear-gradient(90deg, transparent, rgba(243, 205, 95, 0.15), transparent); margin: 0 auto; }
+
+/* ==========================================================================
+   DYNAMIC SPLIT ARCHITECTURES
+   ========================================================================== */
+.split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.split-image-panel { border-radius: 4px; overflow: hidden; }
+.split-image-panel.frame-glow-gold { border: 1px solid rgba(243, 205, 95, 0.25); box-shadow: var(--glow-gold); }
+.split-image-panel img { width: 100%; height: auto; object-fit: cover; }
+
+.panel-tag-neon { font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 12px; }
+.split-text-panel h2 { font-family: var(--font-serif-lux); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.25; margin-bottom: 22px; color: #FFF; }
+.split-text-panel p { color: #94A3B8; font-size: 1rem; margin-bottom: 26px; }
+
+.cyber-quote-box {
+    padding: 14px 20px;
+    background-color: rgba(14, 15, 20, 0.6);
+    border-left: 3px solid var(--jewel-ruby);
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #E2E8F0;
+}
+
+.btn-neon-action {
+    background-color: transparent;
+    padding: 13px 26px;
+    border-radius: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-neon-action.hover-bg-ruby:hover { background-color: var(--jewel-ruby); color: #FFF; box-shadow: var(--glow-ruby); }
+
+/* ==========================================================================
+   PRODUCT VAULT INVENTORY GRID
+   ========================================================================== */
+.section-heading-centered { text-align: center; margin-bottom: 55px; }
+.sub-tag-chroma { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 12px; }
+.section-heading-centered h2 { font-family: var(--font-serif-lux); font-size: clamp(1.9rem, 4.2vw, 2.6rem); font-weight: 500; }
+
+.chroma-divider-bar {
+    width: 60px;
+    height: 1.5px;
+    margin: 16px auto 0 auto;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 36px;
+}
+
+.collection-card {
+    background-color: var(--surface-solid-card);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card-img-holder { height: 350px; overflow: hidden; position: relative; }
+.collection-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--timing-bezier); }
+.collection-card:hover img { transform: scale(1.04); }
+
+.card-body-content { padding: 26px; border-top: 3px solid transparent; }
+.card-body-content.border-glow-gold { border-top-color: var(--jewel-gold); }
+.card-body-content.border-glow-ruby { border-top-color: var(--jewel-ruby); }
+
+.collection-card:hover { border-color: rgba(255, 46, 99, 0.2); box-shadow: var(--glow-ruby); }
+.card-body-content h3 { font-family: var(--font-serif-lux); font-size: 1.25rem; margin-bottom: 12px; color: #FFF; }
+.card-body-content p { font-size: 0.92rem; color: #94A3B8; margin-bottom: 22px; line-height: 1.6; }
+.neon-arrow-link { font-size: 0.82rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; text-decoration: none;}
+
+/* ==========================================================================
+   FILTERABLE INTEGRATED MASONRY ARCHITECTURE
+   ========================================================================== */
+.gallery-header-flex { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 45px; flex-wrap: wrap; gap: 24px; }
+.gallery-navigation-filters { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.g-filter-btn {
+    background-color: var(--surface-solid-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: #CBD5E1;
+    padding: 9px 20px;
+    font-family: var(--font-sans-clean);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.g-filter-btn.active, .g-filter-btn:hover { background: var(--jewel-ruby); border-color: var(--jewel-ruby); color: #FFF; font-weight: 700; }
+.interactive-masonry-canvas { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); grid-auto-rows: 340px; gap: 24px; }
+.masonry-brick { position: relative; border-radius: 2px; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); display: block; }
+.masonry-brick img { width: 100%; height: 100%; object-fit: cover; }
+
+.brick-overlay-cyber {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(2, 3, 6, 0.94);
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.masonry-brick:hover .brick-overlay-cyber { opacity: 1; }
+
+/* ==========================================================================
+   MAP ENCAPSULATION MODULE
+   ========================================================================== */
+.contact-split-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(35px, 5vw, 70px); }
+.contact-card-details { padding: 8px 0; }
+
+.routing-address-container {
+    display: flex; gap: 18px;
+    background-color: var(--surface-solid-card);
+    padding: 22px; border-radius: 2px; margin: 26px 0;
+}
+
+.route-icon-neon { font-size: 1.3rem; }
+.route-text strong { color: white; font-size: 1.05rem; font-family: var(--font-serif-lux); }
+.quick-comms-row { margin-bottom: 32px; }
+
+.comm-block-neon { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.comm-block-neon i { font-size: 1.4rem; }
+.comm-block-neon span { display: block; font-size: 0.72rem; color: #64748B; text-transform: uppercase; }
+.comm-block-neon strong { font-size: 1.2rem; color: white; }
+
+.btn-google-navigation-maps {
+    background-color: #FF2E63; color: white;
+    padding: 14px 28px; border-radius: 3px; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+    text-transform: uppercase; font-size: 0.85rem; transition: opacity 0.2s ease;
+}
+
+.btn-google-navigation-maps:hover { opacity: 0.9; box-shadow: var(--glow-ruby); }
+
+.live-map-wrapper {
+    min-height: 440px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+/* ==========================================================================
+   PRODUCTION TRUST CORPORATE FOOTER
+   ========================================================================== */
+.architectural-footer {
+    background-color: #010204;
+    border-top: 2px solid var(--jewel-gold);
+    padding-block: 65px 35px;
+    padding-inline: max(24px, 4vw);
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 45px;
+    margin-bottom: 45px;
+}
+
+.footer-logo-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.f-logo-img { width: 38px; height: 38px; border-radius: 2px; border: 1px solid var(--jewel-gold); }
+.footer-brand-segment .f-guj { font-family: var(--font-serif-lux); font-size: 1.4rem; color: #FFF; display: block; }
+.footer-brand-segment .f-eng { font-size: 0.68rem; letter-spacing: 3px; font-weight: 700; display: block; }
+.footer-desc { color: #94A3B8; font-size: 0.88rem; max-width: 350px; line-height: 1.6; }
+
+.footer-links-segment h4 {
+    font-family: var(--font-serif-lux); color: #FFF;
+    font-size: 0.95rem; margin-bottom: 22px; letter-spacing: 1px; text-transform: uppercase;
+}
+.footer-links-segment ul { list-style: none; }
+.footer-links-segment li { margin-bottom: 14px; }
+.footer-links-segment a { color: #94A3B8; font-size: 0.88rem; text-decoration: none; transition: color 0.2s ease; }
+.footer-links-segment a:hover { color: var(--jewel-ruby); }
+.footer-links-segment span { color: #CBD5E1; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; }
+
+.footer-base-bar {
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding-top: 26px; text-align: center; font-size: 0.78rem; color: #475569;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT MATRIX CONSTRAINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero-container, .split-container, .contact-split-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .hero-asset-wrapper { max-width: 500px; margin: 0 auto; }
+    .footer-grid-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .mobile-toggle { display: flex; }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; max-width: 290px; height: 100vh;
+        background-color: #05080E;
+        border-left: 1px solid rgba(243, 205, 95, 0.15);
+        flex-direction: column; justify-content: center;
+        gap: 34px; padding: 40px;
+        transition: right 0.45s var(--timing-bezier);
+        z-index: 1001;
+    }
+    
+    .nav-menu.mobile-active { right: 0; }
+    
+    .mobile-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .mobile-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .mobile-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    .footer-grid-container { grid-template-columns: 1fr; gap: 36px; }
+}
