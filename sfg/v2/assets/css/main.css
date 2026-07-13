@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Swasthya Fit Club — Stylesheet Entry Point
+   Architecture: CUBE CSS (Composition, Utility, Block, Exception)
+   layered with native CSS Cascade Layers so import order never
+   fights specificity.
+   ========================================================================== */
+
+@layer tokens, base, layout, components, sections, animations, responsive;
+
+@import url("variables.css") layer(tokens);
+@import url("base.css") layer(base);
+@import url("layout.css") layer(layout);
+@import url("components.css") layer(components);
+@import url("sections.css") layer(sections);
+@import url("animations.css") layer(animations);
+@import url("responsive.css") layer(responsive);

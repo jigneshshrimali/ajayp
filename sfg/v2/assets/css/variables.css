@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
+:root {
+  /* ---- Color: Brand ---- */
+  --color-navy: #16385c;
+  --color-navy-light: #2c5b86;
+  --color-green-900: #123a2a;
+  --color-green-800: #16543b;
+  --color-green-700: #1c6b48;
+  --color-green-600: #257e56;
+  --color-green-500: #2f9367;
+  --color-green-100: #e5f2ea;
+  --color-green-50: #f2f8f4;
+
+  /* ---- Color: Neutrals ---- */
+  --color-ink: #16201c;
+  --color-ink-soft: #384a42;
+  --color-text-muted: #6b776f;
+  --color-text-faint: #8a938d;
+  --color-border: #e7e9e4;
+  --color-border-soft: #eef1ec;
+  --color-cream: #f8f6ee;
+  --color-cream-deep: #f1ecd9;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f8f5;
+  --color-bg-tint: #f3f7f4;
+
+  /* ---- Color: Semantic ---- */
+  --color-primary: var(--color-green-700);
+  --color-primary-hover: var(--color-green-800);
+  --color-accent: var(--color-green-600);
+  --color-star: #e8a93a;
+
+  /* ---- Typography ---- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+  --fs-sm: clamp(0.8125rem, 0.79rem + 0.12vw, 0.9375rem);
+  --fs-base: clamp(0.9375rem, 0.9rem + 0.15vw, 1.0625rem);
+  --fs-md: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
+  --fs-lg: clamp(1.25rem, 1.15rem + 0.4vw, 1.625rem);
+  --fs-xl: clamp(1.625rem, 1.4rem + 0.9vw, 2.25rem);
+  --fs-2xl: clamp(2rem, 1.6rem + 1.6vw, 3.25rem);
+  --fs-3xl: clamp(2.5rem, 1.9rem + 2.4vw, 4.25rem);
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.08em;
+  --ls-wider: 0.14em;
+
+  /* ---- Spacing ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 6.5rem;
+
+  --section-pad-y: clamp(3.5rem, 3rem + 2.5vw, 6.5rem);
+  --container-pad-x: clamp(1.25rem, 1rem + 2vw, 3rem);
+  --container-max: 1320px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 2px 8px rgba(20, 40, 30, 0.06);
+  --shadow-md: 0 8px 30px rgba(20, 40, 30, 0.08);
+  --shadow-lg: 0 20px 60px rgba(20, 40, 30, 0.12);
+  --shadow-card: 0 1px 2px rgba(20, 40, 30, 0.04), 0 12px 32px -12px rgba(20, 40, 30, 0.14);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.45s;
+  --dur-slow: 0.9s;
+
+  /* ---- Layout ---- */
+  --header-h: 84px;
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-cursor: 300;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 68px;
+  }
+}

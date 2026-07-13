@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Animation & Interaction Layer
+   ========================================================================== */
+
+/* ---- Preloader ---- */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  transition: opacity 0.6s var(--ease-out), visibility 0.6s var(--ease-out);
+}
+
+.preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__mark {
+  width: 72px;
+  height: 72px;
+  animation: preloader-pulse 1.6s var(--ease-in-out) infinite;
+}
+
+@keyframes preloader-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.88); opacity: 0.6; }
+}
+
+/* ---- Scroll progress bar ---- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-green-600), var(--color-green-800));
+  z-index: calc(var(--z-header) + 1);
+  transform-origin: left;
+}
+
+/* ---- Cursor follower (desktop, fine pointers only) ---- */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-green-600);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: width var(--dur-fast) var(--ease-out), height var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out), opacity var(--dur-fast);
+  mix-blend-mode: multiply;
+  opacity: 0;
+}
+
+.cursor-glow.is-active {
+  opacity: 1;
+}
+
+.cursor-glow.is-hovering {
+  width: 54px;
+  height: 54px;
+  background: rgba(47, 147, 103, 0.12);
+}
+
+/* ---- Back to top ---- */
+.back-to-top {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-green-700);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-header);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out),
+    visibility var(--dur-med);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---- Magnetic wrapper ---- */
+[data-magnetic] {
+  display: inline-flex;
+}
+
+/* ---- Mobile nav drawer ---- */
+.main-nav {
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100dvh - var(--header-h));
+    background: var(--color-bg);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    padding: var(--space-2xl) var(--container-pad-x);
+    transform: translateX(100%);
+    z-index: calc(var(--z-header) - 1);
+  }
+
+  .main-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .main-nav a {
+    font-size: var(--fs-lg);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle .icon-close {
+    display: none;
+  }
+
+  .nav-toggle.is-open .icon-menu {
+    display: none;
+  }
+
+  .nav-toggle.is-open .icon-close {
+    display: block;
+  }
+}
